@@ -18,9 +18,7 @@ const Button = tw.button`
 function App() {
 	return (
 		<div className="App">
-			<h1 className="ml-4 mb-3 p-4 text-4xl font-bold underline">
-				Hello world!
-			</h1>
+			<h1 className="mb-4 text-4xl font-bold underline">Hello world!</h1>
 			<Button>Super button</Button>
 		</div>
 	);
