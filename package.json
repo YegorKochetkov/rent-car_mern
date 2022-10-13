@@ -13,9 +13,14 @@
 		"@types/node": "^16.7.13",
 		"@types/react": "^18.0.0",
 		"@types/react-dom": "^18.0.0",
+		"husky": "^8.0.1",
+		"install": "^0.13.0",
+		"lint-staged": "^13.0.3",
+		"prettier": "^2.7.1",
 		"react": "^18.2.0",
 		"react-dom": "^18.2.0",
 		"react-scripts": "5.0.1",
+		"styled-components": "^5.3.6",
 		"typescript": "^4.4.2",
 		"web-vitals": "^2.1.0"
 	},
@@ -24,11 +29,12 @@
 		"build": "react-scripts build",
 		"test": "react-scripts test",
 		"eject": "react-scripts eject",
-		"prepare": "husky install && npx husky add .husky/pre-commit \"npm run lint-stage\"",
-		"format": "prettier --write . --ignore-path .gitignore",
+		"prepare": "husky install",
+		"add-pre-commit": "npx husky add .husky/pre-commit \"npm run lint-stage\"",
+		"format": "npx prettier --write . --ignore-path .gitignore",
 		"lint:write": "npx eslint src/**/* --fix",
 		"fix-style": "npm run format && npm run lint:write",
-		"lint-stage": "npx --no-install lint-staged"
+		"lint-stage": "npx lint-staged"
 	},
 	"eslintConfig": {
 		"extends": [
@@ -62,7 +68,7 @@
 		]
 	},
 	"lint-staged": {
-		"src/**/*.{js,mjs}": [
+		"src/**/*.{js,mjs,ts,tsx}": [
 			"npm run fix-style"
 		]
 	},
@@ -77,5 +83,11 @@
 			"last 1 firefox version",
 			"last 1 safari version"
 		]
+	},
+	"devDependencies": {
+		"autoprefixer": "^10.4.12",
+		"postcss": "^8.4.18",
+		"tailwind-styled-components": "^2.2.0",
+		"tailwindcss": "^3.1.8"
 	}
 }
