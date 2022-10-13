@@ -1,7 +1,7 @@
 {
-  "singleQuote": true,
-  "trailingComma": "all",
-  "arrowParens": "always",
-  "endOfLine": "lf",
-  "bracketSameLine": false
+	"singleQuote": true,
+	"trailingComma": "all",
+	"arrowParens": "always",
+	"endOfLine": "lf",
+	"bracketSameLine": false
 }
