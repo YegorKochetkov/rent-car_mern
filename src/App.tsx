@@ -1,24 +1,25 @@
 import React from 'react';
-import logo from './logo.svg';
+import tw from 'tailwind-styled-components';
 import './App.css';
+
+const Button = tw.button`
+	shadow
+	shadow-gray-400/50
+	hover:shadow
+	hover:shadow-gray-600
+	active:shadow-inner
+	active:shadow-gray-600
+	p-3
+	transition
+	bg-slate-100
+	rounded-md
+`;
 
 function App() {
 	return (
 		<div className="App">
-			<header className="App-header">
-				<img src={logo} className="App-logo" alt="logo" />
-				<p>
-					Edit <code>src/App.tsx</code> and save to reload.
-				</p>
-				<a
-					className="App-link"
-					href="https://reactjs.org"
-					target="_blank"
-					rel="noopener noreferrer"
-				>
-					Learn React
-				</a>
-			</header>
+			<h1 className="text-4xl mb-2 font-bold underline">Hello world!</h1>
+			<Button>Super button</Button>
 		</div>
 	);
 }
