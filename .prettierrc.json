@@ -3,5 +3,6 @@
 	"trailingComma": "all",
 	"arrowParens": "always",
 	"endOfLine": "lf",
-	"bracketSameLine": false
+	"bracketSameLine": false,
+	"plugins": ["prettier-plugin-tailwindcss"]
 }
