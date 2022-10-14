@@ -1,6 +1,7 @@
 import React from 'react';
 import tw from 'tailwind-styled-components';
 import styled from 'styled-components';
+import NavBar from 'app/components/navbar';
 
 const PageContainer = tw(styled.div``)`
 	flex
@@ -25,15 +26,15 @@ const Button = tw(styled.button``)`
 	transition
 `;
 
-const Span = tw(styled.span``)`text-red-400`;
+const AccentSpan = tw(styled.span``)`text-red-400`;
 
 function HomePage() {
 	return (
 		<PageContainer>
+			<NavBar />
 			Hello world!
 			<Button>
-				Super button
-				<Span>text</Span>
+				Super button<AccentSpan>text</AccentSpan>
 			</Button>
 		</PageContainer>
 	);
