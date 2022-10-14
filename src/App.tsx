@@ -1,26 +1,21 @@
 import React from 'react';
+import HomePage from './app/containers/HomePage';
 import tw from 'tailwind-styled-components';
+import styled from 'styled-components';
 import './App.css';
 
-const Button = tw.button`
-	rounded-md
-	bg-slate-100
-	p-3
-	shadow
-	shadow-gray-400/50
-	transition
-	hover:shadow
-	hover:shadow-gray-600/60
-	active:shadow-inner
-	active:shadow-gray-600/60
+const AppContainer = tw(styled.div``)`
+	flex
+	flex-col
+	w-full
+	h-full
 `;
 
 function App() {
 	return (
-		<div className="App">
-			<h1 className="mb-4 text-4xl font-bold underline">Hello world!</h1>
-			<Button>Super button</Button>
-		</div>
+		<AppContainer>
+			<HomePage />
+		</AppContainer>
 	);
 }
 
