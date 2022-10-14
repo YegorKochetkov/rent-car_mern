@@ -20,3 +20,4 @@
 - [ ] Serve React App through Node.js production server
 - [ ] Dockerize backend and frontend with Node image
 - [ ] Deploy to the VPS Server
+- [ ] Add mail/password & google authorization with react-router
