@@ -27,6 +27,8 @@ const LogoImageContainer = tw(styled.div``)`
 	md:h-8
 `;
 
+const AccentSpan = tw(styled.span``)`text-red-500`;
+
 function Logo() {
 	return (
 		<LogoContainer>
@@ -34,7 +36,9 @@ function Logo() {
 				<LogoImage src={CarLogoImg} alt="Car shape in circle" />
 			</LogoImageContainer>
 
-			<LogoText>HolyCar.</LogoText>
+			<LogoText>
+				Holy<AccentSpan>Car</AccentSpan>.
+			</LogoText>
 		</LogoContainer>
 	);
 }
