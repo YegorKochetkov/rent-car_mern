@@ -1,10 +1,10 @@
 import React from 'react';
 import HomePage from './app/containers/HomePage';
 import tw from 'tailwind-styled-components';
-import styled from 'styled-components';
+import { TailwindComponent } from 'tailwind-styled-components/dist/tailwind';
 import './App.css';
 
-const AppContainer = tw(styled.div``)`
+const AppContainer: TailwindComponent<any> = tw.div`
 	flex
 	flex-col
 	w-full

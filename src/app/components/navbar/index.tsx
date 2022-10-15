@@ -1,17 +1,15 @@
 import React from 'react';
 import tw from 'tailwind-styled-components';
-import styled from 'styled-components';
+import { TailwindComponent } from 'tailwind-styled-components/dist/tailwind';
 import Logo from '../logo';
 
-const NavBarContainer = tw(styled.div``)`
+const NavBarContainer: TailwindComponent<any> = tw.div`
 	flex
 	flex-row
 	items-center
 	justify-between
 	w-full
 	max-w-2xl
-	lg:pl-12
-	lg:pr-12
 `;
 
 function NavBar() {

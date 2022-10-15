@@ -1,40 +1,33 @@
 import React from 'react';
 import tw from 'tailwind-styled-components';
-import styled from 'styled-components';
+import { TailwindComponent } from 'tailwind-styled-components/dist/tailwind';
 import CarLogoImg from 'assets/images/car-logo.png';
 
-const LogoContainer = tw(styled.div``)`
+const LogoContainer: TailwindComponent<any> = tw.div`
 	flex
 	items-center
+	p-1
 `;
 
-const LogoText = tw(styled.div``)`
-	m-1
+const LogoText: TailwindComponent<any> = tw.p`
 	text-xl
 	md:text-2xl
 	text-black
 	font-bold
 `;
 
-const LogoImage = styled.img`
-	height: 100%;
-	width: auto;
-`;
-
-const LogoImageContainer = tw(styled.div``)`
-	w-auto
+const LogoImage: TailwindComponent<any> = tw.img`
 	h-7
 	md:h-8
+	mr-1
 `;
 
-const AccentSpan = tw(styled.span``)`text-red-500`;
+const AccentSpan: TailwindComponent<any> = tw.span`text-red-500`;
 
 function Logo() {
 	return (
 		<LogoContainer>
-			<LogoImageContainer>
-				<LogoImage src={CarLogoImg} alt="Car shape in circle" />
-			</LogoImageContainer>
+			<LogoImage src={CarLogoImg} alt="Car shape in circle" />
 
 			<LogoText>
 				Holy<AccentSpan>Car</AccentSpan>.
