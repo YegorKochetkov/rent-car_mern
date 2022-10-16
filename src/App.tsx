@@ -1,10 +1,9 @@
 import React from 'react';
 import HomePage from './app/containers/HomePage';
-import tw from 'tailwind-styled-components';
-import { TailwindComponent } from 'tailwind-styled-components/dist/tailwind';
+import tw from 'twin.macro';
 import './App.css';
 
-const AppContainer: TailwindComponent<any> = tw.div`
+const AppContainer = tw.div`
 	flex
 	flex-col
 	w-full

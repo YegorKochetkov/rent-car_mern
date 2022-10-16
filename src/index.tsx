@@ -1,7 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { store } from './app/store';
 import { Provider } from 'react-redux';
+import { store } from './app/store';
+import { GlobalStyles as BaseStyles } from 'twin.macro';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
@@ -12,6 +13,7 @@ const root = ReactDOM.createRoot(
 root.render(
 	<React.StrictMode>
 		<Provider store={store}>
+			<BaseStyles />
 			<App />
 		</Provider>
 	</React.StrictMode>,

@@ -1,9 +1,8 @@
 import React from 'react';
-import tw from 'tailwind-styled-components';
-import { TailwindComponent } from 'tailwind-styled-components/dist/tailwind';
-import NavBar from 'app/components/navbar';
+import tw from 'twin.macro';
+import NavBar from 'app/components/navbar/NavBar';
 
-const PageContainer: TailwindComponent<any> = tw.div`
+const PageContainer = tw.div`
 	flex
 	flex-col
 	items-center
@@ -12,27 +11,26 @@ const PageContainer: TailwindComponent<any> = tw.div`
 	overflow-x-hidden
 `;
 
-const Button: TailwindComponent<any> = tw.button`
-	p-3
+const Button = tw.button`
 	m-1
 	rounded-md
 	bg-slate-100
+	p-3
 	shadow
 	shadow-gray-400/50
+	transition
 	hover:shadow
 	hover:shadow-gray-600/60
 	active:shadow-inner
 	active:shadow-gray-600/60
-	transition
 `;
 
-const AccentSpan: TailwindComponent<any> = tw.span`text-red-400`;
+const AccentSpan = tw.span`text-red-600`;
 
 function HomePage() {
 	return (
 		<PageContainer>
 			<NavBar />
-			Hello world!
 			<Button>
 				Super button<AccentSpan>text</AccentSpan>
 			</Button>
