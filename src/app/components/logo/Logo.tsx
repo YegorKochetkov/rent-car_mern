@@ -3,10 +3,10 @@ import tw from 'twin.macro';
 import CarLogoImg from 'assets/images/car-logo.png';
 
 const LogoContainer = tw.a`
-		flex
-		items-center
-		p-1
-		text-blue-500
+	flex
+	items-center
+	min-w-fit
+	text-blue-500
 `;
 
 const LogoText = tw.p`
