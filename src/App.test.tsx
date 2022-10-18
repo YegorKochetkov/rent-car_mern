@@ -1,11 +1,16 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
-import App from './App';
+import NavBar from 'app/components/NavBar/NavBar';
+import HomePage from 'app/containers/HomePage/HomePage';
 
-test('renders learn react link', () => {
-	render(<App />);
+test('render menu', () => {
+	render(<NavBar />);
 	const linkElement = screen.getByText(/holy/i);
-	const buttonElement = screen.getByText(/super button/i);
 	expect(linkElement).toBeInTheDocument();
+});
+
+test('render main', () => {
+	render(<HomePage />);
+	const buttonElement = screen.getByText(/super button/i);
 	expect(buttonElement).toBeInTheDocument();
 });
