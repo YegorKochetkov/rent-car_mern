@@ -15,24 +15,22 @@
 		"@types/react": "^18.0.0",
 		"@types/react-dom": "^18.0.0",
 		"@types/styled-components": "^5.1.26",
-		"babel-plugin-styled-components": "^2.0.7",
 		"husky": "^8.0.1",
 		"lint-staged": "^13.0.3",
 		"prettier": "^2.7.1",
 		"react": "^18.2.0",
 		"react-dom": "^18.2.0",
 		"react-redux": "^8.0.4",
-		"react-responsive": "^9.0.0",
 		"react-scripts": "5.0.1",
 		"styled-components": "^5.3.6",
-		"twin.macro": "^3.0.0-rc.5",
+		"twin.macro": "^3",
 		"typescript": "^4.4.2",
 		"web-vitals": "^2.1.0"
 	},
 	"scripts": {
-		"start": "react-scripts start",
-		"build": "react-scripts build",
-		"test": "react-scripts test",
+		"start": "react-app-rewired start",
+		"build": "react-app-rewired build",
+		"test": "react-app-rewired test --env=jsdom",
 		"eject": "react-scripts eject",
 		"prepare": "husky install",
 		"add-pre-commit": "npx husky add .husky/pre-commit \"npm run lint-stage\"",
@@ -90,7 +88,10 @@
 		]
 	},
 	"devDependencies": {
+		"babel-plugin-styled-components": "^2.0.7",
+		"customize-cra": "^1.0.0",
 		"prettier-plugin-tailwindcss": "^0.1.13",
+		"react-app-rewired": "^2.2.1",
 		"tailwindcss": "^3.1.8"
 	},
 	"babelMacros": {
