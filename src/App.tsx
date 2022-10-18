@@ -1,5 +1,5 @@
 import React from 'react';
-import HomePage from './app/containers/HomePage';
+import HomePage from 'app/containers/HomePage/HomePage';
 import tw from 'twin.macro';
 import './App.css';
 
