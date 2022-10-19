@@ -5,7 +5,7 @@ import HomePage from 'app/containers/HomePage/HomePage';
 
 test('render menu', () => {
 	render(<NavBar />);
-	const linkElement = screen.getByText(/holy/i);
+	const linkElement = screen.getByText(/rent/i);
 	expect(linkElement).toBeInTheDocument();
 });
 
