@@ -28,7 +28,7 @@ function Logo() {
 			<LogoImage src={CarLogoImg} alt="Car shape in circle" />
 
 			<LogoText>
-				Holy<AccentSpan>Car</AccentSpan>.
+				Rent<AccentSpan>Car</AccentSpan>.
 			</LogoText>
 		</LogoContainer>
 	);
