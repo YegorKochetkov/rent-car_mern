@@ -1,9 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { useMediaQuery } from 'react-responsive';
+import MenuItems from './MenuItems';
 import tw from 'twin.macro';
+import { SCREENS } from 'app/helpers/screens';
 
 const MobileMenu = tw.ul`
 	absolute
-	top-0
+	top-10
 	bottom-0
 	left-0
 	right-0
@@ -15,6 +18,8 @@ const MobileMenu = tw.ul`
 	list-none
 	text-4xl
 	bg-white
+	origin-top
+	animate-open-menu
 `;
 
 const Menu = tw.ul`
@@ -24,48 +29,36 @@ const Menu = tw.ul`
 	items-baseline
 	justify-end
 	gap-5
-	text-base
+	text-2xl
 	bg-white
 `;
 
-const NavBarMenuItem = tw.li`
-	text-black
-	font-medium
-	cursor-pointer
-	transition
-	hover:text-red-600
-`;
-
 const HamburgerButton = tw.button`
+	relative
+	w-8
+	h-8
 	self-end
 	hover:text-red-600
 `;
 
-const MenuItems = () => (
-	<>
-		<NavBarMenuItem>
-			<a href="/#">Home</a>
-		</NavBarMenuItem>
-		<NavBarMenuItem>
-			<a href="/#">Cars</a>
-		</NavBarMenuItem>
-		<NavBarMenuItem>
-			<a href="/#">Services</a>
-		</NavBarMenuItem>
-		<NavBarMenuItem>
-			<a href="/#">Contact&nbsp;Us</a>
-		</NavBarMenuItem>
-	</>
-);
 //TODO: add useLockBodyScroll()
 function NavBarMenu() {
-	const isMobile = navigator.maxTouchPoints >= 1;
+	const isMobile = useMediaQuery({ maxWidth: SCREENS.sm });
+	const [isOpenMobileMenu, setIsOpenMobileMenu] = useState(false);
+
+	const toggleMobileMenu = () => {
+		setIsOpenMobileMenu(!isOpenMobileMenu);
+	};
 
 	return isMobile ? (
-		<MobileMenu>
-			<HamburgerButton>&#9776;</HamburgerButton>
-			<MenuItems />
-		</MobileMenu>
+		<React.Fragment>
+			<HamburgerButton onClick={toggleMobileMenu}>&#9776;</HamburgerButton>
+			{isOpenMobileMenu && (
+				<MobileMenu>
+					<MenuItems />
+				</MobileMenu>
+			)}
+		</React.Fragment>
 	) : (
 		<Menu>
 			<MenuItems />

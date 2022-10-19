@@ -10,15 +10,13 @@ const LogoContainer = tw.a`
 `;
 
 const LogoText = tw.p`
-	text-xl
-	md:text-2xl
 	text-black
 	font-bold
 `;
 
 const LogoImage = tw.img`
-	h-7
-	md:h-8
+	h-8
+	md:h-9
 	mr-1
 `;
 

@@ -13,6 +13,7 @@ const NavBarContainer = tw.menu`
 	px-2
 	py-1
 	lg:px-12
+	md:text-3xl
 `;
 
 function NavBar() {

@@ -8,6 +8,7 @@ const AppContainer = tw.div`
 	flex-col
 	w-full
 	h-full
+	text-2xl
 `;
 
 function App() {

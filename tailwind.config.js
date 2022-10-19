@@ -4,6 +4,18 @@ module.exports = {
 	presets: [],
 	darkMode: 'media', // or 'class'
 	theme: {
+		extend: {
+			keyframes: {
+				'open-menu': {
+					'0%': { transform: 'scaleY(0)' },
+					'80%': { transform: 'scaleY(1.2)' },
+					'100%': { transform: 'scaleY(1)' },
+				},
+			},
+			animation: {
+				'open-menu': 'open-menu 0.3s ease-in-out forwards',
+			},
+		},
 		screens: {
 			sm: '640px',
 			md: '768px',
