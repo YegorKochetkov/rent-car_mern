@@ -4,7 +4,10 @@
 			"babel-plugin-styled-components",
 			{
 				"meaninglessFileNames": ["index", "styles"],
-				"displayName": true
+				"displayName": true,
+				"minify": true,
+				"transpileTemplateLiterals": true,
+				"pure": true
 			}
 		]
 	]
