@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useMediaQuery } from 'react-responsive';
-import MenuItems from './MenuItems';
+import MenuItems from '../MenuItems/MenuItems';
 import tw from 'twin.macro';
 import styled from 'styled-components';
 import { SCREENS } from 'app/helpers/screens';
