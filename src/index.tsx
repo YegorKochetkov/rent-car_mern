@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { Provider } from 'react-redux';
-import { store } from './app/store';
+import { store } from 'app/store/store';
 import { GlobalStyles } from 'twin.macro';
 import './index.css';
 import App from './App';
