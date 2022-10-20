@@ -6,8 +6,8 @@ import TopSection from 'app/containers/TopSection';
 
 test('render menu', () => {
 	render(<NavBar />);
-	const linkElement = screen.getByText(/rent/i);
-	expect(linkElement).toBeInTheDocument();
+	const nav = screen.getByText(/rent/i);
+	expect(nav).toBeInTheDocument();
 });
 
 test('render main', () => {
@@ -16,8 +16,14 @@ test('render main', () => {
 	expect(paragraph).toBeInTheDocument();
 });
 
-test('render top section', () => {
+test('render top slogan', () => {
 	render(<TopSection />);
-	const buttonElement = screen.getByText(/rent the best/i);
-	expect(buttonElement).toBeInTheDocument();
+	const slogan = screen.getByText(/rent the best/i);
+	expect(slogan).toBeInTheDocument();
+});
+
+test('render top standalone car', () => {
+	render(<TopSection />);
+	const blob = screen.getByAltText(/abstract/i);
+	expect(blob).toBeInTheDocument();
 });
