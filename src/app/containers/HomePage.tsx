@@ -11,29 +11,10 @@ const PageContainer = tw.div`
 	h-full
 `;
 
-const Button = tw.button`
-	m-1
-	p-3
-	rounded-md
-	bg-slate-100
-	shadow
-	shadow-gray-400/50
-	transition
-	hover:shadow
-	hover:shadow-gray-600/60
-	active:shadow-inner
-	active:shadow-gray-600/60
-`;
-
-const AccentSpan = tw.span`text-red-600`;
-
 function HomePage() {
 	return (
 		<PageContainer>
 			<NavBar />
-			{/* <Button>
-				Super button<AccentSpan>text</AccentSpan>
-			</Button> */}
 			<TopSection />
 			<p>
 				ducimus sunt placeat praesentium, recusandae natus inventore numquam
