@@ -11,6 +11,8 @@ const LogoContainer = tw.a`
 
 const LogoText = tw.p`
 	text-black
+	text-2xl
+	md:text-3xl
 	font-bold
 `;
 

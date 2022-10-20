@@ -3,6 +3,10 @@ import tw from 'twin.macro';
 import BlobImage from '../../../assets/images/blob.svg';
 import Car from '../../../assets/images/mclaren-orange-big.png';
 
+const Wrapper = tw.div`
+	relative
+`;
+
 const BlobContainer = tw.div`
 	absolute
 	-rotate-12
@@ -30,14 +34,14 @@ const CarContainer = tw.div`
 
 function McLaren() {
 	return (
-		<React.Fragment>
+		<Wrapper>
 			<BlobContainer>
 				<img src={BlobImage} alt="abstract round shapeless background" />
 			</BlobContainer>
 			<CarContainer>
 				<img src={Car} alt="abstract round shapeless background" />
 			</CarContainer>
-		</React.Fragment>
+		</Wrapper>
 	);
 }
 

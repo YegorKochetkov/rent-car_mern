@@ -2,6 +2,7 @@ import React from 'react';
 import tw from 'twin.macro';
 import NavBar from 'app/containers/NavBar';
 import TopSection from './TopSection';
+import PrimaryButton from 'app/components/Buttons/PrimaryButton';
 
 const PageContainer = tw.div`
 	flex
@@ -17,6 +18,7 @@ function HomePage() {
 		<PageContainer>
 			<NavBar />
 			<TopSection />
+			<PrimaryButton />
 			<p>
 				ducimus sunt placeat praesentium, recusandae natus inventore numquam
 				atque itaque? Debitis, unde iusto adipisci enim aperiam dolore quae

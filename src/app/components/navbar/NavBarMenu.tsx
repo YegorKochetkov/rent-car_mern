@@ -7,18 +7,19 @@ import { SCREENS } from 'app/helpers/screens';
 import lockBodyScroll from 'app/helpers/lockBodyScroll';
 import HamburgerButton from '../HamburgerButton/HamburgerButton';
 
+const Wrapper = tw.div`relative flex justify-end w-full`;
+
 const MobileMenu = styled.ul<{ isOpen: boolean }>`
 	${tw`
 		hidden
 		absolute
 		top-10
-		bottom-0
-		left-0
-		right-0
+		w-screen
+		h-screen
 		flex-col
 		items-center
 		gap-4
-		p-3
+		pt-4
 		list-none
 		text-4xl
 		bg-white
@@ -48,7 +49,7 @@ function NavBarMenu() {
 	};
 
 	return isMobile ? (
-		<React.Fragment>
+		<Wrapper>
 			<HamburgerButton
 				toggleMenu={toggleMobileMenu}
 				isOpen={isOpenMobileMenu}
@@ -56,7 +57,7 @@ function NavBarMenu() {
 			<MobileMenu isOpen={isOpenMobileMenu}>
 				<MenuItems />
 			</MobileMenu>
-		</React.Fragment>
+		</Wrapper>
 	) : (
 		<Menu>
 			<MenuItems />

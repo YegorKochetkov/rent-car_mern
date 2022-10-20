@@ -2,7 +2,6 @@ import React from 'react';
 import tw from 'twin.macro';
 
 const Button = tw.button`
-	m-1
 	p-3
 	rounded-md
 	bg-slate-100
