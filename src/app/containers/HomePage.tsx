@@ -9,6 +9,7 @@ const PageContainer = tw.div`
 	items-center
 	w-full
 	h-full
+	overflow-hidden
 `;
 
 function HomePage() {

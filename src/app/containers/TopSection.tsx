@@ -1,16 +1,17 @@
-import Slogan from 'app/components/Slogan/Slogan';
 import React from 'react';
+import Slogan from 'app/components/Slogan/Slogan';
+import McLaren from 'app/components/StandaloneCar/StandaloneCar';
 import tw from 'twin.macro';
 
 const TopSectionContainer = tw.div`
 	flex
 	justify-between
-	min-h-screen
 	w-full
+	min-h-[12em]
 	max-w-screen-2xl
-	mt-4
-	md:mt-8
-	lg:mt-12
+	my-5
+	md:my-8
+	lg:my-12
 	lg:px-12
 	px-3
 `;
@@ -34,7 +35,9 @@ function TopSection() {
 			<LeftContainer>
 				<Slogan />
 			</LeftContainer>
-			<RightContainer></RightContainer>
+			<RightContainer>
+				<McLaren />
+			</RightContainer>
 		</TopSectionContainer>
 	);
 }
