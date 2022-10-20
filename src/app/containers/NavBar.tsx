@@ -1,7 +1,7 @@
 import React from 'react';
 import tw from 'twin.macro';
-import NavBarMenu from './NavBarMenu';
-import Logo from '../Logo/Logo';
+import NavBarMenu from '../components/NavBar/NavBarMenu';
+import Logo from '../components/Logo/Logo';
 
 const NavBarContainer = tw.menu`
 	flex
