@@ -16,7 +16,7 @@ const Header = tw.h1`
 `;
 
 const Description = tw.p`
-	text-sm
+	text-base
 	md:text-lg
 	lg:text-xl
 	xl:text-2xl
