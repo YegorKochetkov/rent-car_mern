@@ -39,7 +39,7 @@ function McLaren() {
 				<img src={BlobImage} alt="abstract round shapeless background" />
 			</BlobContainer>
 			<CarContainer>
-				<img src={Car} alt="abstract round shapeless background" />
+				<img src={Car} alt="orange McLaren" />
 			</CarContainer>
 		</Wrapper>
 	);
