@@ -1,7 +1,8 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
-import NavBar from 'app/components/NavBar/NavBar';
-import HomePage from 'app/containers/HomePage/HomePage';
+import NavBar from 'app/containers/NavBar';
+import HomePage from 'app/containers/HomePage';
+import TopSection from 'app/containers/TopSection';
 
 test('render menu', () => {
 	render(<NavBar />);
@@ -11,6 +12,12 @@ test('render menu', () => {
 
 test('render main', () => {
 	render(<HomePage />);
-	const buttonElement = screen.getByText(/super button/i);
+	const paragraph = screen.getByText(/lorem/i);
+	expect(paragraph).toBeInTheDocument();
+});
+
+test('render top section', () => {
+	render(<TopSection />);
+	const buttonElement = screen.getByText(/rent the best/i);
 	expect(buttonElement).toBeInTheDocument();
 });
