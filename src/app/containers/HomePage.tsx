@@ -1,6 +1,7 @@
 import React from 'react';
 import tw from 'twin.macro';
-import NavBar from 'app/components/NavBar/NavBar';
+import NavBar from 'app/containers/NavBar';
+import TopSection from './TopSection';
 
 const PageContainer = tw.div`
 	flex
@@ -30,9 +31,10 @@ function HomePage() {
 	return (
 		<PageContainer>
 			<NavBar />
-			<Button>
+			{/* <Button>
 				Super button<AccentSpan>text</AccentSpan>
-			</Button>
+			</Button> */}
+			<TopSection />
 			<p>
 				ducimus sunt placeat praesentium, recusandae natus inventore numquam
 				atque itaque? Debitis, unde iusto adipisci enim aperiam dolore quae
