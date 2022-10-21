@@ -4,7 +4,7 @@
 
 - [x] Setting Up Frontend Project and Installing dependencies
 - [x] Create landing page navbar component
-- [ ] Create landing page top section
+- [x] Create landing page top section
 - [ ] Create booking card with third-party calendar component
 - [ ] Create booking steps component to landing page
 - [ ] Create about us section on landingPage
