@@ -21,7 +21,7 @@ const Description = tw.p`
 	lg:text-xl
 	xl:text-2xl
 	max-h-full
-	text-gray-800
+	text-gray-600
 `;
 
 function Slogan() {
