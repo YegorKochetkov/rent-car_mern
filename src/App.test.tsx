@@ -29,7 +29,7 @@ test('render top standalone car', () => {
 });
 
 test('render buttons', () => {
-	render(<TopSection />);
+	render(<HomePage />);
 	const buttons = screen.getAllByText(/your/i);
 	expect(buttons.length).toEqual(2);
 });
