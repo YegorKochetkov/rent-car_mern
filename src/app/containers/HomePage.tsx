@@ -2,21 +2,34 @@ import React from 'react';
 import tw from 'twin.macro';
 import NavBar from 'app/containers/NavBar';
 import TopSection from './TopSection';
+import Button from 'app/components/Button/Button';
 
 const PageContainer = tw.div`
 	flex
 	flex-col
+	gap-5
 	items-center
 	w-full
 	h-full
 	overflow-hidden
 `;
 
+const ButtonsContainer = tw.div`flex flex-wrap gap-3`;
+
 function HomePage() {
 	return (
 		<PageContainer>
 			<NavBar />
 			<TopSection />
+			<ButtonsContainer>
+				<Button>
+					Book your <span>Ride</span>
+				</Button>
+				<Button theme="outlined">
+					Sell your <span>Car</span>
+				</Button>
+			</ButtonsContainer>
+
 			<p>
 				ducimus sunt placeat praesentium, recusandae natus inventore numquam
 				atque itaque? Debitis, unde iusto adipisci enim aperiam dolore quae
