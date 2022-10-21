@@ -20,13 +20,17 @@ const BaseButton = tw.button`
 	hover:shadow-neutral-600
 	active:shadow-inner
 	active::shadow-neutral-600
+	[&>span]:text-black
 `;
 
 const Outlined = tw(BaseButton)`
 	bg-transparent
 	text-black
 	hover:text-white
-	hover::bg-red-600
+	hover:bg-red-600
+	[&>span]:transition
+	[&>span]:text-red-600
+	[&>span]:hover:text-black
 `;
 
 function Button(props: ButtonProps) {

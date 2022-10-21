@@ -30,8 +30,6 @@ const RightContainer = tw.div`
 	w-1/2
 `;
 
-const AccentSpan = tw.span`text-black hover:text-white`;
-
 const ButtonsContainer = tw.div`flex flex-wrap gap-3 mt-7`;
 
 function TopSection() {
@@ -41,10 +39,10 @@ function TopSection() {
 				<Slogan />
 				<ButtonsContainer>
 					<Button>
-						Book your <AccentSpan>Ride</AccentSpan>
+						Book your <span>Ride</span>
 					</Button>
 					<Button theme="outlined">
-						Sell your <AccentSpan>Car</AccentSpan>
+						Sell your <span>Car</span>
 					</Button>
 				</ButtonsContainer>
 			</LeftContainer>
