@@ -27,3 +27,9 @@ test('render top standalone car', () => {
 	const blob = screen.getByAltText(/abstract/i);
 	expect(blob).toBeInTheDocument();
 });
+
+test('render buttons', () => {
+	render(<TopSection />);
+	const buttons = screen.getAllByText(/your/i);
+	expect(buttons.length).toEqual(2);
+});
