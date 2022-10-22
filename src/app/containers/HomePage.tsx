@@ -29,7 +29,7 @@ function HomePage() {
 				</Button>
 			</ButtonsContainer>
 
-			<p>
+			<p className="max-w-screen-2xl px-3 text-justify lg:px-12">
 				ducimus sunt placeat praesentium, recusandae natus inventore numquam
 				atque itaque? Debitis, unde iusto adipisci enim aperiam dolore quae
 				omnis. Inventore ipsum repellat ullam voluptates voluptatem mollitia

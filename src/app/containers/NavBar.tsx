@@ -12,15 +12,13 @@ const NavBarContainer = tw.menu`
 	justify-between
 	w-full
 	max-w-screen-2xl
-	px-2
+	px-3
 	py-2
 	[&_div]:-mx-2
 	lg:px-12
 	md:text-3xl
 bg-white/40
 	backdrop-blur-sm
-	ring-1
-	ring-slate-300/10
 `;
 
 function NavBar() {
