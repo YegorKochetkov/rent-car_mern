@@ -5,6 +5,7 @@
 	"author": "Yegor Kochetkov",
 	"main": "index.tsx",
 	"license": "MIT",
+	"homepage": "https://yegorkochetkov.github.io/rent-car_mern",
 	"dependencies": {
 		"@reduxjs/toolkit": "^1.8.6",
 		"@testing-library/jest-dom": "^5.14.1",
@@ -15,6 +16,7 @@
 		"@types/react": "^18.0.0",
 		"@types/react-dom": "^18.0.0",
 		"@types/styled-components": "^5.1.26",
+		"gh-pages": "^4.0.0",
 		"husky": "^8.0.1",
 		"lint-staged": "^13.0.3",
 		"prettier": "^2.7.1",
@@ -38,7 +40,9 @@
 		"format": "npx prettier --write . --ignore-path .gitignore",
 		"lint:write": "npx eslint ./src/**/* --fix",
 		"fix-style": "npm run format && npm run lint:write",
-		"lint-stage": "npx lint-staged"
+		"lint-stage": "npx lint-staged",
+		"predeploy": "npm run build",
+		"deploy": "gh-pages -d build"
 	},
 	"eslintConfig": {
 		"extends": [
