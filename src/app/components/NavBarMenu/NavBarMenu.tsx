@@ -26,7 +26,6 @@ const MobileMenu = styled.ul<{ isOpen: boolean }>`
 		bg-white
 		origin-top
 		animate-open-menu
-		z-30
 		overflow-y-scroll
 	`}
 	${(props) => props.isOpen && tw`flex`}

@@ -19,7 +19,6 @@ const BlobContainer = tw.div`
 	[&>img]:w-full
 	[&>img]:h-auto
 	[&>img]:max-h-max
-	-z-20
 `;
 
 const CarContainer = tw.div`
@@ -29,7 +28,6 @@ const CarContainer = tw.div`
 	[&>img]:w-full
 	[&>img]:h-auto
 	[&>img]:max-h-max
-	-z-10
 `;
 
 function McLaren() {

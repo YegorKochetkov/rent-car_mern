@@ -26,6 +26,7 @@ const RightContainer = tw.div`
 	flex
 	flex-col
 	w-1/2
+	-z-30
 `;
 
 function TopSection() {
