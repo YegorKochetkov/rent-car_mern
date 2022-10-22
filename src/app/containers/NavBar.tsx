@@ -4,7 +4,6 @@ import NavBarMenu from '../components/NavBarMenu/NavBarMenu';
 import Logo from '../components/Logo/Logo';
 
 const NavBarContainer = tw.menu`
-	relative
 	flex
 	flex-row
 	items-center

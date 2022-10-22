@@ -11,7 +11,7 @@ const PageContainer = tw.div`
 	items-center
 	w-full
 	h-full
-	overflow-hidden
+	overflow-x-hidden
 `;
 
 const ButtonsContainer = tw.div`flex flex-wrap gap-3`;
