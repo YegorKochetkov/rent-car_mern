@@ -4,6 +4,8 @@ import NavBarMenu from '../components/NavBarMenu/NavBarMenu';
 import Logo from '../components/Logo/Logo';
 
 const NavBarContainer = tw.menu`
+	sticky
+	top-0
 	flex
 	flex-row
 	items-center
@@ -11,10 +13,14 @@ const NavBarContainer = tw.menu`
 	w-full
 	max-w-screen-2xl
 	px-2
-	py-1
+	py-2
 	[&_div]:-mx-2
 	lg:px-12
 	md:text-3xl
+bg-white/40
+	backdrop-blur-sm
+	ring-1
+	ring-slate-300/10
 `;
 
 function NavBar() {
