@@ -1,6 +1,6 @@
 import React from 'react';
 import tw from 'twin.macro';
-import CarLogoImg from 'assets/images/car-logo.png';
+import CarLogoImg from 'assets/images/car-logo2.png';
 
 const LogoContainer = tw.a`
 	flex
