@@ -19,8 +19,6 @@ const NavBarContainer = tw.menu`
 	md:text-3xl
 bg-white/40
 	backdrop-blur-sm
-	ring-1
-	ring-slate-300/10
 `;
 
 function NavBar() {
