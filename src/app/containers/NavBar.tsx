@@ -1,6 +1,6 @@
 import React from 'react';
 import tw from 'twin.macro';
-import NavBarMenu from '../components/NavBar/NavBarMenu';
+import NavBarMenu from '../components/NavBarMenu/NavBarMenu';
 import Logo from '../components/Logo/Logo';
 
 const NavBarContainer = tw.menu`
