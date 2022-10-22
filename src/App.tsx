@@ -8,6 +8,7 @@ const AppContainer = tw.div`
 	w-full
 	h-full
 	text-2xl
+	overflow-x-clip
 `;
 
 function App() {
