@@ -2,7 +2,9 @@ import React from 'react';
 import tw from 'twin.macro';
 
 const NavBarMenuItem = tw.li`
+w-full
 	text-black
+	text-center
 	font-medium
 	cursor-pointer
 	transition
