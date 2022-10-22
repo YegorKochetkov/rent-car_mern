@@ -20,12 +20,14 @@ const MobileMenu = styled.ul<{ isOpen: boolean }>`
 		items-center
 		gap-4
 		pt-4
+		pb-12
 		list-none
 		text-4xl
 		bg-white
 		origin-top
 		animate-open-menu
 		z-30
+		overflow-y-scroll
 	`}
 	${(props) => props.isOpen && tw`flex`}
 `;
