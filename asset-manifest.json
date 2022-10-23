@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/rent-car_mern/static/css/main.51047d74.css",
-    "main.js": "/rent-car_mern/static/js/main.2653f40b.js",
+    "main.css": "/rent-car_mern/static/css/main.ae361950.css",
+    "main.js": "/rent-car_mern/static/js/main.edec7d82.js",
     "static/js/787.0d6199b8.chunk.js": "/rent-car_mern/static/js/787.0d6199b8.chunk.js",
     "static/media/mclaren-orange-big.png": "/rent-car_mern/static/media/mclaren-orange-big.46e3c615f2d4c2513ce5.png",
     "static/media/car-logo2.png": "/rent-car_mern/static/media/car-logo2.980a28c6cd13331f18ff.png",
     "index.html": "/rent-car_mern/index.html",
     "static/media/blob.svg": "/rent-car_mern/static/media/blob.f2195ec62f0748be8f89a49cc63bf8b9.svg",
-    "main.51047d74.css.map": "/rent-car_mern/static/css/main.51047d74.css.map",
-    "main.2653f40b.js.map": "/rent-car_mern/static/js/main.2653f40b.js.map",
+    "main.ae361950.css.map": "/rent-car_mern/static/css/main.ae361950.css.map",
+    "main.edec7d82.js.map": "/rent-car_mern/static/js/main.edec7d82.js.map",
     "787.0d6199b8.chunk.js.map": "/rent-car_mern/static/js/787.0d6199b8.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.51047d74.css",
-    "static/js/main.2653f40b.js"
+    "static/css/main.ae361950.css",
+    "static/js/main.edec7d82.js"
   ]
 }
