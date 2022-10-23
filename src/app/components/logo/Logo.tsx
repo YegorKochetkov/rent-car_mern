@@ -1,6 +1,6 @@
 import React from 'react';
 import tw from 'twin.macro';
-import CarLogoImg from 'assets/images/car-logo2.png';
+import CarLogoImg from 'assets/images/logo.svg';
 
 const LogoContainer = tw.a`
 	flex
@@ -9,12 +9,13 @@ const LogoContainer = tw.a`
 	text-2xl
 	font-bold
 	md:text-3xl
-	text-black
+
+	text-red-600
 	transition
-	hover:text-red-600
+	hover:text-black
 	[&>span]:transition
-	[&>span]:text-red-600
-	[&>span]:hover:text-black
+	[&>span]:text-black
+	[&>span]:hover:text-red-600
 `;
 
 const LogoImage = tw.img`
