@@ -9,7 +9,6 @@ const LogoContainer = tw.a`
 	text-2xl
 	font-bold
 	md:text-3xl
-
 	text-red-600
 	transition
 	hover:text-black

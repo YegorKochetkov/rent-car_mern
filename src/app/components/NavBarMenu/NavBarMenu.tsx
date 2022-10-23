@@ -20,13 +20,13 @@ const MobileMenu = styled.ul<{ isOpen: boolean }>`
 		items-center
 		gap-4
 		pt-4
-		pb-12
+		pb-14
 		list-none
 		text-4xl
 		bg-white
 		origin-top
 		animate-open-menu
-		overflow-y-scroll
+		overflow-y-auto
 	`}
 	${(props) => props.isOpen && tw`flex`}
 `;
@@ -56,7 +56,7 @@ function NavBarMenu() {
 				toggleMenu={toggleMobileMenu}
 				isOpen={isOpenMobileMenu}
 			/>
-			<MobileMenu isOpen={isOpenMobileMenu}>
+			<MobileMenu isOpen={isOpenMobileMenu} id="mobileMenu">
 				<MenuItems />
 			</MobileMenu>
 		</Wrapper>
