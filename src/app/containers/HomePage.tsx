@@ -13,7 +13,7 @@ const PageContainer = tw.div`
 	h-full
 `;
 
-const ButtonsContainer = tw.div`flex flex-wrap gap-3`;
+const ButtonsContainer = tw.div`flex flex-wrap justify-start gap-3 w-full`;
 
 function HomePage() {
 	return (
