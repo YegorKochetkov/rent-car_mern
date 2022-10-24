@@ -9,7 +9,7 @@ type ButtonProps = {
 const BaseButton = tw.button`
 	px-5
 	py-3
-	text-lg
+	text-inherit
 	text-white
 	font-semibold
 	bg-red-600

@@ -19,7 +19,7 @@ const TopSectionContainer = tw.div`
 const LeftContainer = tw.div`
 	flex
 	flex-col
-	gap-5
+	gap-4
 	w-1/2
 `;
 
@@ -30,7 +30,7 @@ const RightContainer = tw.div`
 	w-1/2
 	-z-30
 `;
-const ButtonsContainer = tw.div`flex flex-wrap justify-start gap-2 w-full`;
+const ButtonsContainer = tw.div`flex flex-wrap justify-start gap-2 w-full text-base`;
 
 function TopSection() {
 	return (
