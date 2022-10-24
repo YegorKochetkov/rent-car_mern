@@ -31,5 +31,11 @@ test('render top standalone car', () => {
 test('render buttons', () => {
 	render(<HomePage />);
 	const buttons = screen.getAllByText(/your/i);
-	expect(buttons.length).toEqual(2);
+	expect(buttons.length).toEqual(3);
+});
+
+test('render book card', () => {
+	render(<HomePage />);
+	const bookCard = screen.getByText(/pick up date/i);
+	expect(bookCard).toBeInTheDocument();
 });
