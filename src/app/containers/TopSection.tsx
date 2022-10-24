@@ -2,6 +2,7 @@ import React from 'react';
 import Slogan from 'app/components/Slogan/Slogan';
 import McLaren from 'app/components/StandaloneCar/StandaloneCar';
 import tw from 'twin.macro';
+import Button from 'app/components/Button/Button';
 
 const TopSectionContainer = tw.div`
 	flex
@@ -18,6 +19,7 @@ const TopSectionContainer = tw.div`
 const LeftContainer = tw.div`
 	flex
 	flex-col
+	gap-5
 	w-1/2
 `;
 
@@ -28,12 +30,21 @@ const RightContainer = tw.div`
 	w-1/2
 	-z-30
 `;
+const ButtonsContainer = tw.div`flex flex-wrap justify-start gap-2 w-full`;
 
 function TopSection() {
 	return (
 		<TopSectionContainer>
 			<LeftContainer>
 				<Slogan />
+				<ButtonsContainer>
+					<Button>
+						Book your <span>Ride</span>
+					</Button>
+					<Button theme="outlined">
+						Sell your <span>Car</span>
+					</Button>
+				</ButtonsContainer>
 			</LeftContainer>
 			<RightContainer>
 				<McLaren />

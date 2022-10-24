@@ -2,17 +2,12 @@ import React from 'react';
 import tw from 'twin.macro';
 
 const Header = tw.h1`
-	mb-4
-	font-bold
-	md:font-extrabold
+	font-extrabold
 	lg:font-black
 	text-black
-	text-2xl
-	sm:text-3xl
+	text-3xl
 	md:text-5xl
 	xl:text-6xl
-	md:leading-snug
-	xl:leading-tight
 `;
 
 const Description = tw.p`
