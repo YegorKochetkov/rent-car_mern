@@ -38,6 +38,7 @@ const Menu = tw.ul`
 	items-baseline
 	justify-end
 	gap-5
+	pr-3
 	text-2xl
 `;
 

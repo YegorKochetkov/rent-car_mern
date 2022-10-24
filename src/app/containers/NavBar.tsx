@@ -14,7 +14,7 @@ const NavBarContainer = tw.menu`
 	max-w-screen-2xl
 	px-3
 	py-3
-	[&_ul]:-mx-3
+	[&_ul]:-mr-3
 	lg:px-12
 bg-white/40
 	backdrop-blur-sm
