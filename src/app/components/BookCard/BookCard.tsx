@@ -21,6 +21,7 @@ const CardContainer = tw.div`
 	py-1
 	md:px-6
 	md:py-2
+	mb-10
 	text-xs
 	md:text-sm
 	rounded

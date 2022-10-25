@@ -9,11 +9,12 @@ const TopSectionContainer = tw.div`
 	justify-between
 	w-full
 	min-h-[11em]
-	widescreen:min-h-[90vh]
-	widescreen:md:min-h-[14em]
+	widescreen:min-h-[80vh]
+	widescreen:md:min-h-[13em]
 	max-w-screen-2xl
 	px-3
 	lg:px-12
+	mb-10
 `;
 
 const LeftContainer = tw.div`
