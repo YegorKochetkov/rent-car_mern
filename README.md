@@ -1,13 +1,13 @@
-## [Demo](https://yegorkochetkov.github.io/rent-car_mern/) -Car rent app (MERN)
+# Car rent app (MERN)[Demo](https://yegorkochetkov.github.io/rent-car_mern/) -
 
 **React.js** website with **Redux Toolkit**, **Typescript**, **Tailwind CSS**, **Styled-components**, responsive design, **Node.js/Express.js** server side app, **Apollo GraphQL** with **Nest.js** and **Docker**.
 
-### Progress:
+## Progress
 
 - [x] Setting Up Frontend Project and Installing dependencies
 - [x] Create landing page navbar component
 - [x] Create landing page top section
-- [ ] Create booking card with third-party calendar component
+- [x] Create booking card with third-party calendar component
 - [ ] Create booking steps component to landing page
 - [ ] Create about us section on landingPage
 - [ ] Create list of cars component
