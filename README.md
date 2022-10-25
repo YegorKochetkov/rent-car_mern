@@ -8,7 +8,7 @@
 - [x] Create landing page navbar component
 - [x] Create landing page top section
 - [x] Create booking card with third-party calendar component
-- [ ] Create booking steps component to landing page
+- [x] Create booking steps component to landing page
 - [ ] Create about us section on landingPage
 - [ ] Create list of cars component
 - [ ] Create footer

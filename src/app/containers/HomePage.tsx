@@ -3,6 +3,7 @@ import tw from 'twin.macro';
 import NavBar from 'app/containers/NavBar';
 import TopSection from './TopSection';
 import BookCard from 'app/components/BookCard/BookCard';
+import BookingSteps from './BookingSteps';
 
 const PageContainer = tw.div`
 	flex
@@ -19,6 +20,7 @@ function HomePage() {
 			<NavBar />
 			<TopSection />
 			<BookCard />
+			<BookingSteps />
 			<p className="max-w-screen-2xl px-3 text-justify lg:px-12">
 				ducimus sunt placeat praesentium, recusandae natus inventore numquam
 				atque itaque? Debitis, unde iusto adipisci enim aperiam dolore quae
