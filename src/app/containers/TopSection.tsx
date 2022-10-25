@@ -28,7 +28,7 @@ const RightContainer = tw.div`
 	flex
 	flex-col
 	w-1/2
-	-z-30
+	-z-1
 `;
 const ButtonsContainer = tw.div`flex flex-wrap justify-start gap-2 w-full text-base`;
 
