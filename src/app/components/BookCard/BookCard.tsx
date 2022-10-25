@@ -115,7 +115,7 @@ function BookCard() {
 					<Icon>
 						<FontAwesomeIcon icon={faCalendarAlt} />
 					</Icon>
-					<Text>Pick Up Date</Text>
+					<Text>Pick-Up Date</Text>
 					<SmallArrowIcon>
 						<FontAwesomeIcon icon={isStartDateOpen ? faCaretUp : faCaretDown} />
 					</SmallArrowIcon>
