@@ -42,7 +42,7 @@ function NavBar() {
 
 			if (mobileMenu) {
 				window.scrollY - scrollPage > 0
-					? (mobileMenu.style.top = '2rem')
+					? (mobileMenu.style.top = '2.2rem')
 					: (mobileMenu.style.top = '2.5rem');
 			}
 
