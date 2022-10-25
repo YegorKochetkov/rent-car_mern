@@ -30,12 +30,18 @@ test('render top standalone car', () => {
 
 test('render buttons', () => {
 	render(<HomePage />);
-	const buttons = screen.getAllByText(/your/i);
-	expect(buttons.length).toEqual(3);
+	const buttons = screen.getAllByTestId('button');
+	expect(buttons).toHaveLength(3);
 });
 
 test('render book card', () => {
 	render(<HomePage />);
-	const bookCard = screen.getByText(/pick up date/i);
+	const bookCard = screen.getByText(/return date/i);
 	expect(bookCard).toBeInTheDocument();
+});
+
+test('render booking steps', () => {
+	render(<HomePage />);
+	const steps = screen.getAllByTestId('step');
+	expect(steps).toHaveLength(3);
 });
