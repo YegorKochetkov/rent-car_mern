@@ -24,7 +24,7 @@ const CardContainer = tw.div`
 	text-xs
 	md:text-sm
 	rounded
-	shadow
+	shadow-md
 `;
 
 const ItemContainer = tw.div`
@@ -66,6 +66,7 @@ const Text = tw.span`
 	text-gray-600
 	text-xs
 	md:text-sm
+	select-none
 `;
 
 const LineSeparator = tw.div`
@@ -82,6 +83,7 @@ const DateCalendar = styled(Calendar)`
 		left-[-0.5em]
 		w-fit
 		max-w-none
+		select-none
 	`}
 `;
 
