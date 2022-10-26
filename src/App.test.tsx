@@ -10,10 +10,12 @@ test('render menu', () => {
 	expect(nav).toBeInTheDocument();
 });
 
-test('render main', () => {
+test('render about us', () => {
 	render(<HomePage />);
-	const paragraph = screen.getByText(/lorem/i);
-	expect(paragraph).toBeInTheDocument();
+	const header = screen.getByText(
+		/Feel the best experience with out rent deal/i,
+	);
+	expect(header).toBeInTheDocument();
 });
 
 test('render top slogan', () => {
