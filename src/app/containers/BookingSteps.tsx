@@ -12,6 +12,7 @@ const Wrapper = tw.div`
 	flex
 	flex-col
 	items-center
+	mb-16
 	py-3
 	lg:py-6
 `;

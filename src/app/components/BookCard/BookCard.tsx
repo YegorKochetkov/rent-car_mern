@@ -17,11 +17,11 @@ const CardContainer = tw.div`
 	justify-center
 	items-center
 	gap-3
+	mb-20
 	px-2
 	py-1
 	md:px-6
 	md:py-2
-	mb-10
 	text-xs
 	md:text-sm
 	rounded

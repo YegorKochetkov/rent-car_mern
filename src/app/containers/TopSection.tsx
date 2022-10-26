@@ -12,9 +12,9 @@ const TopSectionContainer = tw.div`
 	widescreen:min-h-[80vh]
 	widescreen:md:min-h-[13em]
 	max-w-screen-2xl
+	mb-20
 	px-3
 	lg:px-12
-	mb-10
 `;
 
 const LeftContainer = tw.div`
@@ -25,7 +25,6 @@ const LeftContainer = tw.div`
 `;
 
 const RightContainer = tw.div`
-	relative
 	flex
 	flex-col
 	w-1/2
