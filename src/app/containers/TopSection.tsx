@@ -12,6 +12,7 @@ const TopSectionContainer = tw.div`
 	widescreen:min-h-[80vh]
 	widescreen:md:min-h-[13em]
 	max-w-screen-2xl
+	mt-16
 	mb-20
 	px-3
 	lg:px-12

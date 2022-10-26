@@ -4,7 +4,7 @@ import NavBarMenu from '../components/NavBarMenu/NavBarMenu';
 import Logo from '../components/Logo/Logo';
 
 const NavBarContainer = tw.menu`
-	sticky
+	fixed
 	top-0
 	flex
 	flex-row
@@ -21,6 +21,7 @@ const NavBarContainer = tw.menu`
 bg-white/40
 	backdrop-blur-sm
 	transition-all
+	duration-500
 	z-10
 `;
 
