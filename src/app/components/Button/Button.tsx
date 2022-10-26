@@ -36,9 +36,9 @@ const Outlined = tw(BaseButton)`
 function Button(props: ButtonProps) {
 	const { theme, children } = props;
 	if (theme === 'outlined')
-		return <Outlined data-testId="button">{children}</Outlined>;
+		return <Outlined data-testid="button">{children}</Outlined>;
 
-	return <BaseButton data-testId="button">{children}</BaseButton>;
+	return <BaseButton data-testid="button">{children}</BaseButton>;
 }
 
 export default Button;

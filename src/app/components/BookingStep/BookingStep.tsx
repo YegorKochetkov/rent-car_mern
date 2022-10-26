@@ -51,7 +51,7 @@ type BookingStepProps = {
 
 function BookingStep(props: BookingStepProps) {
 	return (
-		<StepContainer data-testId="step">
+		<StepContainer data-testid="step">
 			<StepIcon>
 				<FontAwesomeIcon icon={props.icon} />
 			</StepIcon>
