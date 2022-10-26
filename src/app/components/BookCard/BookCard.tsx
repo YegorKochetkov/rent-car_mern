@@ -68,6 +68,7 @@ const Text = tw.span`
 	text-xs
 	md:text-sm
 	select-none
+	text-center
 `;
 
 const LineSeparator = tw.div`
