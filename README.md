@@ -9,7 +9,7 @@
 - [x] Create landing page top section
 - [x] Create booking card with third-party calendar component
 - [x] Create booking steps component to landing page
-- [ ] Create about us section on landingPage
+- [x] Create about us section on landingPage
 - [ ] Create list of cars component
 - [ ] Create footer
 - [ ] Add responsive carousel component for rendering car cards
