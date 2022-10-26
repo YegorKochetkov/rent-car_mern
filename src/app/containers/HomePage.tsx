@@ -4,11 +4,11 @@ import NavBar from 'app/containers/NavBar';
 import TopSection from './TopSection';
 import BookCard from 'app/components/BookCard/BookCard';
 import BookingSteps from './BookingSteps';
+import AboutUs from './AboutUs';
 
 const PageContainer = tw.div`
 	flex
 	flex-col
-	gap-3
 	items-center
 	w-full
 	h-full
@@ -21,6 +21,7 @@ function HomePage() {
 			<TopSection />
 			<BookCard />
 			<BookingSteps />
+			<AboutUs />
 			<p className="max-w-screen-2xl px-3 text-justify lg:px-12">
 				ducimus sunt placeat praesentium, recusandae natus inventore numquam
 				atque itaque? Debitis, unde iusto adipisci enim aperiam dolore quae
