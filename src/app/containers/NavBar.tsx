@@ -14,7 +14,7 @@ const NavBarContainer = tw.menu`
 	max-w-screen-2xl
 	[&_ul]:-mr-3
 	mb-8
-	widescreen::mb-0
+	widescreen:mb-0
 	py-3
 	px-3
 	lg:px-12
