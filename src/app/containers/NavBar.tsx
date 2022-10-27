@@ -11,11 +11,11 @@ const NavBarContainer = tw.menu`
 	items-center
 	justify-between
 	w-full
+	h-14
 	max-w-screen-2xl
 	[&_ul]:-mr-3
 	mb-8
 	widescreen:mb-0
-	py-3
 	px-3
 	lg:px-12
 bg-white/40
@@ -34,19 +34,27 @@ function NavBar() {
 			const mobileMenu = document.getElementById('mobileMenu');
 
 			if (navBar) {
-				if (window.scrollY - scrollPage > 0) {
-					navBar.style.paddingTop = '1px';
-					navBar.style.paddingBottom = '5px';
-				} else {
-					navBar.style.paddingTop = '0.75rem';
-					navBar.style.paddingBottom = '0.75rem';
+				const prevStyles = navBar.style.height;
+
+				if (prevStyles !== '2.5rem' && window.scrollY - scrollPage > 0) {
+					navBar.style.height = '2.5rem';
+				}
+
+				if (prevStyles !== '3.5rem' && window.scrollY - scrollPage < 0) {
+					navBar.style.height = '3.5rem';
 				}
 			}
 
 			if (mobileMenu) {
-				window.scrollY - scrollPage > 0
-					? (mobileMenu.style.top = '2.2rem')
-					: (mobileMenu.style.top = '2.5rem');
+				const prevStyles = mobileMenu.style.top;
+
+				if (prevStyles !== '2.2rem' && window.scrollY - scrollPage > 0) {
+					mobileMenu.style.top = '2.2rem';
+				}
+
+				if (prevStyles !== '2.5rem' && window.scrollY - scrollPage < 0) {
+					mobileMenu.style.top = '2.5rem';
+				}
 			}
 
 			scrollPage = window.scrollY;
