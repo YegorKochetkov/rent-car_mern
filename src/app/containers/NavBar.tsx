@@ -18,8 +18,9 @@ const NavBarContainer = tw.menu`
 	widescreen:mb-0
 	px-3
 	lg:px-12
-bg-white/40
-	backdrop-blur-sm
+bg-white/50
+	backdrop-blur-xl
+	shadow-sm
 	transition-all
 	duration-500
 	z-10
