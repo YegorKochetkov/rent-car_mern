@@ -8,6 +8,7 @@ const Header = tw.h1`
 	text-3xl
 	md:text-5xl
 	xl:text-6xl
+	capitalize
 `;
 
 const Description = tw.p`
@@ -22,7 +23,7 @@ const Description = tw.p`
 function Slogan() {
 	return (
 		<React.Fragment>
-			<Header>Rent The Best Quality Car's With Us</Header>
+			<Header>Rent the best quality car's with us</Header>
 			<Description>
 				Always choose the best car from our local stores or order it remotely at
 				the best price for you and get the best quality cars for as long as you

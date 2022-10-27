@@ -22,6 +22,7 @@ const Title = tw.h2`
 	md:text-4xl
 	text-black
 	font-bold
+	capitalize
 `;
 
 const StepsContainer = tw.div`
@@ -36,7 +37,7 @@ const StepsContainer = tw.div`
 function BookingSteps() {
 	return (
 		<Wrapper>
-			<Title>Our Working Steps</Title>
+			<Title>Our working steps</Title>
 			<StepsContainer>
 				<BookingStep icon={faMapMarkedAlt} title="Choose Location">
 					Find the nearest <span>Rent</span>Car<span>.</span> point and book
