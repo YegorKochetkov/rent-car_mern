@@ -1,7 +1,7 @@
-import Car from 'app/components/Car/Car';
-import { Cars } from 'app/helpers/cars';
 import React from 'react';
 import tw from 'twin.macro';
+import Car from 'app/components/Car/Car';
+import { Cars } from 'app/helpers/cars';
 
 const TopCarContainer = tw.div`
 	flex
@@ -27,10 +27,9 @@ const Title = tw.h2`
 const CarsContainer = tw.div`
 	grid
 	grid-cols-1
-	sm:grid-cols-2
-	md:grid-cols-3
-	xl:grid-cols-4
-	2xl:grid-cols-5
+	md:grid-cols-2
+	xl:grid-cols-3
+	2xl:grid-cols-4
 	gap-4
 	transition-all
 `;

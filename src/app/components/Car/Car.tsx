@@ -10,44 +10,63 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 
 const CarContainer = tw.div`
-	flex
-	flex-col
-	items-center
-	w-[10em]
+	relative
+	grid
+	grid-rows-[repeat(5, 1fr)]
+	w-[14em]
+	h-[9.5em]
 	p-3
-	pb-4
 	rounded-md
 	shadow-md
 	hover:shadow-lg
 	bg-white
-	[&>button]:text-base
-	[&>button]:w-full
+	[&_button]:text-base
+	[&_button]:w-[12em]
+	[&_button]:hover:w-[12em]
+	[&_button]:sm:w-full
+	[&>span]:hover:w-[5em]
+	[&>span]:sm:w-[14em]
+	[&>span]:hover:h-full
 `;
 
-const CarThumbnail = tw.div`
-	w-full
+const CarThumbnail = tw.span`
+	absolute
+	inset-0
+	w-[5em]
 	h-full
+	backdrop-blur-lg
+	flex
+	justify-center
+	items-center
+	overflow-hidden
+	rounded-l-md
+	shadow
+	transition-all
+	duration-500
 `;
 
 const CarName = tw.h3`
 	text-base
 	font-bold
 	text-black
-	m-1
+	w-[12em]
+	text-right
+	mb-6
+	truncate
 `;
 
 const PricesContainer = tw.div`
-	w-full
 	flex
-	gap-4
-	justify-start
-	mt-3
+	flex-col
+	gap-1
+	self-end
 `;
 
 const DailyPrice = tw.h5`
 	text-red-600
 	font-bold
 	text-base
+	text-right
 	[&>span]:text-inherit
 	[&>span]:text-sm
 	[&>span]:font-thin
@@ -57,6 +76,7 @@ const MonthlyPrice = tw.h5`
 	text-gray-600
 	font-bold
 	text-base
+	text-right
 	[&>span]:text-inherit
 	[&>span]:text-sm
 	[&>span]:font-thin
@@ -64,9 +84,11 @@ const MonthlyPrice = tw.h5`
 
 const CarDetailsContainer = tw.div`
 	flex
+	flex-wrap
 	justify-between
-	w-full
-	mb-4
+	w-[8em]
+	gap-x-3
+	mb-8
 `;
 
 const CarDetail = tw.p`
@@ -83,17 +105,16 @@ const CarInfo = tw.span`
 `;
 
 const Separator = tw.div`
-	min-w-full
-	min-h-[1px]
+	w-[8em]
+	h-[1px]
 	flex
-	my-2
 	bg-gray-300
 `;
 
-const RentButton = tw(Button)`
-	min-w-full
-	mt-5
-	capitalize
+const CarContent = tw.div`
+	flex
+	flex-col
+	items-end
 `;
 
 function Car(props: CarType) {
@@ -105,33 +126,35 @@ function Car(props: CarType) {
 			<CarThumbnail>
 				<img src={thumbnail} alt={`${name}`} />
 			</CarThumbnail>
-			<CarName>{name}</CarName>
-			<PricesContainer>
-				<DailyPrice>
-					{dailyPrice}
-					<span>/Day</span>
-				</DailyPrice>
-				<MonthlyPrice>
-					{monthlyPrice}
-					<span>/Month</span>
-				</MonthlyPrice>
-			</PricesContainer>
-			<Separator />
-			<CarDetailsContainer>
-				<CarDetail>
-					<FontAwesomeIcon icon={faTachometerAlt} />
-					<CarInfo>{mileage}</CarInfo>
-				</CarDetail>
-				<CarDetail>
-					<FontAwesomeIcon icon={faGears} />
-					<CarInfo>{gearType}</CarInfo>
-				</CarDetail>
-				<CarDetail>
-					<FontAwesomeIcon icon={faFillDrip} />
-					<CarInfo>{gas}</CarInfo>
-				</CarDetail>
-			</CarDetailsContainer>
-			<RentButton>Rent now</RentButton>
+			<CarContent>
+				<CarName title={name}>{name}</CarName>
+				<PricesContainer>
+					<DailyPrice>
+						{dailyPrice}
+						<span>/Day</span>
+					</DailyPrice>
+					<MonthlyPrice>
+						{monthlyPrice}
+						<span>/Month</span>
+					</MonthlyPrice>
+				</PricesContainer>
+				<Separator />
+				<CarDetailsContainer>
+					<CarDetail>
+						<FontAwesomeIcon icon={faTachometerAlt} />
+						<CarInfo>{mileage}</CarInfo>
+					</CarDetail>
+					<CarDetail>
+						<FontAwesomeIcon icon={faGears} />
+						<CarInfo>{gearType}</CarInfo>
+					</CarDetail>
+					<CarDetail>
+						<FontAwesomeIcon icon={faFillDrip} />
+						<CarInfo>{gas}</CarInfo>
+					</CarDetail>
+				</CarDetailsContainer>
+				<Button>Rent now</Button>
+			</CarContent>
 		</CarContainer>
 	);
 }
