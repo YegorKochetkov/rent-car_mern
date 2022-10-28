@@ -4,6 +4,7 @@ import tw from 'twin.macro';
 type ButtonProps = {
 	theme?: 'outlined' | 'filled';
 	children?: ReactNode;
+	classes?: string;
 };
 
 const BaseButton = tw.button`
@@ -19,7 +20,7 @@ const BaseButton = tw.button`
 	shadow
 	hover:shadow-neutral-600
 	active:shadow-inner
-	active::shadow-neutral-600
+	active:shadow-neutral-600
 	[&>span]:transition-all
 	[&>span]:text-black
 `;
@@ -34,11 +35,19 @@ const Outlined = tw(BaseButton)`
 `;
 
 function Button(props: ButtonProps) {
-	const { theme, children } = props;
+	const { theme, children, classes } = props;
 	if (theme === 'outlined')
-		return <Outlined data-testid="button">{children}</Outlined>;
+		return (
+			<Outlined className={classes} data-testid="button">
+				{children}
+			</Outlined>
+		);
 
-	return <BaseButton data-testid="button">{children}</BaseButton>;
+	return (
+		<BaseButton className={classes} data-testid="button">
+			{children}
+		</BaseButton>
+	);
 }
 
 export default Button;
