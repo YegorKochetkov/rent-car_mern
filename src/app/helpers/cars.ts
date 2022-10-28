@@ -51,12 +51,12 @@ export const Cars: CarType[] = [
 		gas: 'Petrol',
 	},
 	{
-		name: 'Honda CR-V',
+		name: 'Honda City 5 Seater',
 		mileage: '20k',
 		thumbnail:
-			'https://static.cargurus.com/images/forsale/2018/02/14/10/12/2017_honda_cr-v-pic-2561454830775230295-1024x768.jpeg?io=true&width=640&height=480&fit=bounds&format=jpg&auto=webp',
-		dailyPrice: 60,
-		monthlyPrice: 1700,
+			'https://shinewiki.com/wp-content/uploads/2019/11/honda-city.jpg',
+		dailyPrice: 50,
+		monthlyPrice: 1500,
 		gearType: 'Auto',
 		gas: 'Petrol',
 	},
