@@ -61,8 +61,8 @@ function NavBar() {
 			scrollPage = window.scrollY;
 		};
 
-		window.addEventListener('scroll', () => handleScroll());
-		return () => window.removeEventListener('scroll', () => handleScroll());
+		window.addEventListener('scroll', handleScroll);
+		return () => window.removeEventListener('scroll', handleScroll);
 	}, []);
 
 	return (
