@@ -44,28 +44,22 @@ const PricesContainer = tw.div`
 	mt-3
 `;
 
-const SmallText = tw.span`
-	text-inherit
-	text-sm
-	font-thin
-`;
-
 const DailyPrice = tw.h5`
 	text-red-600
 	font-bold
 	text-base
+	[&>span]:text-inherit
+	[&>span]:text-sm
+	[&>span]:font-thin
 `;
 
 const MonthlyPrice = tw.h5`
 	text-gray-600
 	font-bold
 	text-base
-`;
-
-const SmallIcon = tw.div`
-	text-gray-400
-	text-sm
-	mr-1
+	[&>span]:text-inherit
+	[&>span]:text-sm
+	[&>span]:font-thin
 `;
 
 const CarDetailsContainer = tw.div`
@@ -78,6 +72,9 @@ const CarDetailsContainer = tw.div`
 const CarDetail = tw.p`
 	flex
 	items-center
+	[&>svg]:text-gray-400
+	[&>svg]:text-sm
+	[&>svg]:mr-1
 `;
 
 const CarInfo = tw.span`
@@ -112,31 +109,25 @@ function Car(props: CarType) {
 			<PricesContainer>
 				<DailyPrice>
 					{dailyPrice}
-					<SmallText>/Day</SmallText>
+					<span>/Day</span>
 				</DailyPrice>
 				<MonthlyPrice>
 					{monthlyPrice}
-					<SmallText>/Month</SmallText>
+					<span>/Month</span>
 				</MonthlyPrice>
 			</PricesContainer>
 			<Separator />
 			<CarDetailsContainer>
 				<CarDetail>
-					<SmallIcon>
-						<FontAwesomeIcon icon={faTachometerAlt} />
-					</SmallIcon>
+					<FontAwesomeIcon icon={faTachometerAlt} />
 					<CarInfo>{mileage}</CarInfo>
 				</CarDetail>
 				<CarDetail>
-					<SmallIcon>
-						<FontAwesomeIcon icon={faGears} />
-					</SmallIcon>
+					<FontAwesomeIcon icon={faGears} />
 					<CarInfo>{gearType}</CarInfo>
 				</CarDetail>
 				<CarDetail>
-					<SmallIcon>
-						<FontAwesomeIcon icon={faFillDrip} />
-					</SmallIcon>
+					<FontAwesomeIcon icon={faFillDrip} />
 					<CarInfo>{gas}</CarInfo>
 				</CarDetail>
 			</CarDetailsContainer>
