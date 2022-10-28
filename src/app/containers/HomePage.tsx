@@ -5,6 +5,7 @@ import TopSection from './TopSection';
 import BookCard from 'app/components/BookCard/BookCard';
 import BookingSteps from './BookingSteps';
 import AboutUs from './AboutUs';
+import TopCars from './TopCars';
 
 const PageContainer = tw.div`
 	flex
@@ -22,6 +23,7 @@ function HomePage() {
 			<BookCard />
 			<BookingSteps />
 			<AboutUs />
+			<TopCars />
 			<p className="max-w-screen-2xl px-3 text-justify lg:px-12">
 				ducimus sunt placeat praesentium, recusandae natus inventore numquam
 				atque itaque? Debitis, unde iusto adipisci enim aperiam dolore quae
