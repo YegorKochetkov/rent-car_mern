@@ -25,16 +25,17 @@ export const Cars: CarType[] = [
 		name: 'Audi S3',
 		mileage: '10k',
 		thumbnail:
-			'https://cdn.jdpower.com/Models/640x480/2017-Audi-S3-PremiumPlus.jpg',
+			'https://inventory-dmg.assets-cdk.com/chrome/386857/cc_2017AUC320001_01_640_2Y2Y.png',
 		dailyPrice: 70,
 		monthlyPrice: 1600,
 		gearType: 'Auto',
 		gas: 'Petrol',
 	},
 	{
-		name: 'BMW M2',
+		name: 'BMW M3',
 		mileage: '10k',
-		thumbnail: 'https://pbs.twimg.com/media/EmD1MyRXgAENrUW.jpg',
+		thumbnail:
+			'https://inventory-dmg.assets-cdk.com/chrome/406020/cc_2020BMC890009_01_640_300.png',
 		dailyPrice: 70,
 		monthlyPrice: 1600,
 		gearType: 'Auto',
@@ -44,17 +45,17 @@ export const Cars: CarType[] = [
 		name: 'Honda CR-V',
 		mileage: '20k',
 		thumbnail:
-			'https://static.cargurus.com/images/forsale/2018/02/14/10/12/2017_honda_cr-v-pic-2561454830775230295-1024x768.jpeg?io=true&width=640&height=480&fit=bounds&format=jpg&auto=webp',
+			'https://www.pricelanka.lk/wp-content/uploads/2021/04/Honda-CR-V.png',
 		dailyPrice: 60,
 		monthlyPrice: 1600,
 		gearType: 'Auto',
 		gas: 'Petrol',
 	},
 	{
-		name: 'Honda City 5 Seater',
+		name: 'Honda Accord',
 		mileage: '20k',
 		thumbnail:
-			'https://shinewiki.com/wp-content/uploads/2019/11/honda-city.jpg',
+			'https://otohondaconghoa.net/wp-content/uploads/2018/01/accrord.png',
 		dailyPrice: 50,
 		monthlyPrice: 1500,
 		gearType: 'Auto',
