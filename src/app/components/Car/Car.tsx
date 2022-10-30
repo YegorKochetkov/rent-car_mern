@@ -91,7 +91,7 @@ const CarDetailsContainer = tw.div`
 	mb-8
 `;
 
-const CarDetail = tw.p`
+const CarDetails = tw.p`
 	flex
 	items-center
 	[&>svg]:text-gray-400
@@ -140,18 +140,18 @@ function Car(props: CarType) {
 				</PricesContainer>
 				<Separator />
 				<CarDetailsContainer>
-					<CarDetail>
+					<CarDetails>
 						<FontAwesomeIcon icon={faTachometerAlt} />
 						<CarInfo>{mileage}</CarInfo>
-					</CarDetail>
-					<CarDetail>
+					</CarDetails>
+					<CarDetails>
 						<FontAwesomeIcon icon={faGears} />
 						<CarInfo>{gearType}</CarInfo>
-					</CarDetail>
-					<CarDetail>
+					</CarDetails>
+					<CarDetails>
 						<FontAwesomeIcon icon={faFillDrip} />
 						<CarInfo>{gas}</CarInfo>
-					</CarDetail>
+					</CarDetails>
 				</CarDetailsContainer>
 				<Button>Rent now</Button>
 			</CarContent>
