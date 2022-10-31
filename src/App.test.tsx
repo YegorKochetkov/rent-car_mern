@@ -31,9 +31,9 @@ test('render top standalone car', () => {
 });
 
 test('render buttons', () => {
-	render(<HomePage />);
+	render(<TopSection />);
 	const buttons = screen.getAllByTestId('button');
-	expect(buttons).toHaveLength(3);
+	expect(buttons).toHaveLength(2);
 });
 
 test('render book card', () => {
@@ -46,4 +46,10 @@ test('render booking steps', () => {
 	render(<HomePage />);
 	const steps = screen.getAllByTestId('step');
 	expect(steps).toHaveLength(3);
+});
+
+test('render car card', () => {
+	render(<HomePage />);
+	const cards = screen.getAllByTestId('card');
+	expect(cards).toHaveLength(8);
 });

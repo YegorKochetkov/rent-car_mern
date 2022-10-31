@@ -122,7 +122,7 @@ function Car(props: CarType) {
 		props;
 
 	return (
-		<CarContainer>
+		<CarContainer data-testid="card">
 			<CarThumbnail>
 				<img src={thumbnail} alt={`${name}`} />
 			</CarThumbnail>
