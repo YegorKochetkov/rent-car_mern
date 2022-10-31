@@ -10,9 +10,9 @@
 - [x] Create booking card with third-party calendar component
 - [x] Create booking steps component to landing page
 - [x] Create about us section on landingPage
-- [ ] Create list of cars component
+- [x] Create list of cars component
+- [ ] Add responsive carousel component for booking steps
 - [ ] Create footer
-- [ ] Add responsive carousel component for rendering car cards
 - [ ] Add loading spinners
 - [ ] Set up backend server project with Nest.js
 - [ ] Set up TypeORM with MySQL database on Nest.js
