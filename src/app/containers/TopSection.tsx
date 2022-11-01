@@ -8,9 +8,6 @@ const TopSectionContainer = tw.div`
 	flex
 	justify-between
 	w-full
-	min-h-[11em]
-	widescreen:min-h-[80vh]
-	widescreen:md:min-h-[13em]
 	max-w-screen-2xl
 	mt-16
 	mb-20
