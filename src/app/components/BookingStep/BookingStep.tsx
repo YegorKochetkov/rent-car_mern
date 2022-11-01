@@ -7,7 +7,7 @@ const StepContainer = tw.div`
 	flex
 	flex-col
 	items-center
-	min-w-fit
+	basis-1/3
 	hover:cursor-pointer
 	[&>*]:transition-all
 	[&>h3]:hover:text-red-600
