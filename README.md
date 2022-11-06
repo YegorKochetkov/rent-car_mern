@@ -11,7 +11,7 @@
 - [x] Create booking steps component to landing page
 - [x] Create about us section on landingPage
 - [x] Create list of cars component
-- [ ] Add responsive carousel component for booking steps
+- [x] Add responsive carousel component for booking steps
 - [ ] Create footer
 - [ ] Add loading spinners
 - [ ] Set up backend server project with Nest.js
