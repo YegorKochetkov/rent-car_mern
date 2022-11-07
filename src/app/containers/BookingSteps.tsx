@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import {
 	faCalendarAlt,
 	faCarSide,
@@ -6,10 +6,10 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import tw from 'twin.macro';
 import BookingStep from 'app/components/BookingStep/BookingStep';
-import Carousel, { autoplayPlugin, Dots } from '@brainhubeu/react-carousel';
-import '@brainhubeu/react-carousel/lib/style.css';
 import { useMediaQuery } from 'react-responsive';
 import { SCREENS } from 'app/helpers/screens';
+import AliceCarousel from 'react-alice-carousel';
+import 'react-alice-carousel/lib/alice-carousel.css';
 
 const Wrapper = tw.div`
 	w-full
@@ -54,34 +54,12 @@ const steps = [
 
 function BookingSteps() {
 	const isMobile = useMediaQuery({ maxWidth: SCREENS.sm });
-	const [currentSlide, setCurrentSlide] = useState(0);
 
 	return (
 		<Wrapper>
 			<Title>Our working steps</Title>
 			{isMobile ? (
-				<React.Fragment>
-					<Carousel
-						value={currentSlide}
-						onChange={setCurrentSlide}
-						slides={[...steps]}
-						plugins={[
-							'infinite',
-							{
-								resolve: autoplayPlugin,
-								options: {
-									interval: 2500,
-								},
-							},
-						]}
-						animationSpeed={1000}
-					/>
-					<Dots
-						value={currentSlide}
-						onChange={setCurrentSlide}
-						number={steps.length}
-					/>
-				</React.Fragment>
+				<AliceCarousel disableButtonsControls mouseTracking items={steps} />
 			) : (
 				<StepsContainer>
 					{steps.map((step, index) => (
