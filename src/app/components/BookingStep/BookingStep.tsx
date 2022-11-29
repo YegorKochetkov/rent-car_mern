@@ -10,9 +10,9 @@ const StepContainer = tw.div`
 	basis-1/3
 	hover:cursor-pointer
 	[&>*]:transition-all
-	[&>h3]:hover:text-red-600
-	[&>div]:hover:shadow-lg
-	[&>div]:active:shadow-inner
+	hover:[&>h3]:text-red-600
+	hover:[&>div]:shadow-lg
+	active:[&>div]:shadow-inner
 `;
 
 const StepIcon = tw.div`
