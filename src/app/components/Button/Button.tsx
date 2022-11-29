@@ -31,7 +31,7 @@ const Outlined = tw(BaseButton)`
 	hover:text-white
 	hover:bg-red-600
 	[&>span]:text-red-600
-	[&>span]:hover:text-black
+	hover:[&>span]:text-black
 `;
 
 function Button(props: ButtonProps) {
