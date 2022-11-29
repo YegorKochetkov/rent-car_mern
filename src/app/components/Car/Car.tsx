@@ -20,13 +20,15 @@ const CarContainer = tw.div`
 	shadow-md
 	hover:shadow-lg
 	bg-white
+	[&_button]:transition-all
+	[&_button]:duration-500
 	[&_button]:text-base
 	[&_button]:w-[12em]
-	[&_button]:hover:w-[12em]
-	[&_button]:sm:w-full
-	[&>span]:hover:w-[5em]
-	[&>span]:sm:w-[14em]
-	[&>span]:hover:h-full
+	hover:[&_button]:w-[12em]
+	sm:[&_button]:w-full
+	hover:[&>span]:w-[5em]
+	sm:[&>span]:w-[14em]
+	hover:[&>span]:h-full
 `;
 
 const CarThumbnail = tw.span`
