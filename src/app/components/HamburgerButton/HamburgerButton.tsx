@@ -10,8 +10,8 @@ const Button = styled.button<{ isOpen: boolean }>`
 		self-end
 		transition-colors
 		[&>div]:hover:bg-red-600
-		[&>div]:before::hover:bg-red-600
-		[&>div]:after::hover:bg-red-600
+		[&>div]:before:hover:bg-red-600
+		[&>div]:after:hover:bg-red-600
 	`}
 	${(props) =>
 		props.isOpen &&
