@@ -1,72 +1,57 @@
-import React, { useEffect } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import tw from 'twin.macro';
 import NavBarMenu from '../components/NavBarMenu/NavBarMenu';
 import Logo from '../components/Logo/Logo';
+import styled from 'styled-components';
 
-const NavBarContainer = tw.menu`
-	fixed
-	top-0
-	flex
-	flex-row
-	items-center
-	justify-between
-	w-full
-	h-14
-	max-w-screen-2xl
-	[&_ul]:-mr-3
-	mb-8
-	widescreen:mb-0
-	px-3
-	lg:px-12
-bg-white/50
-	backdrop-blur-xl
-	shadow-sm
-	transition-all
-	duration-500
-	z-10
+const NavBarContainer = styled.menu<{ reduceHeight: boolean }>`
+	${tw`
+		sticky
+		top-0
+		flex
+		flex-row
+		items-center
+		justify-between
+		w-full
+		max-w-screen-2xl
+		[&_ul]:-mr-3
+		mb-8
+		px-3
+		lg:px-12
+		bg-white/50
+		backdrop-blur-xl
+		shadow-sm
+		transition-all
+		duration-500
+		z-10
+	`}
+	${(props) =>
+		props.reduceHeight ? tw`h-10 [ul]:top-9` : tw`h-14 [ul]:top-10`}
 `;
 
 function NavBar() {
+	const [offsetY, setOffsetY] = useState(0);
+	const [reduceHeight, setHeight] = useState(false);
+
+	const handleScroll = useCallback(() => {
+		if (window.scrollY - offsetY >= 10) {
+			setHeight(true);
+		}
+
+		if (window.scrollY - offsetY <= -10) {
+			setHeight(false);
+		}
+
+		setOffsetY(window.scrollY);
+	}, [offsetY]);
+
 	useEffect(() => {
-		const navBar = document.getElementById('navbar');
-		let scrollPage = 0;
-
-		const handleScroll = () => {
-			const mobileMenu = document.getElementById('mobileMenu');
-
-			if (navBar) {
-				const prevStyles = navBar.style.height;
-
-				if (prevStyles !== '2.5rem' && window.scrollY - scrollPage > 0) {
-					navBar.style.height = '2.5rem';
-				}
-
-				if (prevStyles !== '3.5rem' && window.scrollY - scrollPage < 0) {
-					navBar.style.height = '3.5rem';
-				}
-			}
-
-			if (mobileMenu) {
-				const prevStyles = mobileMenu.style.top;
-
-				if (prevStyles !== '2.2rem' && window.scrollY - scrollPage > 0) {
-					mobileMenu.style.top = '2.2rem';
-				}
-
-				if (prevStyles !== '2.5rem' && window.scrollY - scrollPage < 0) {
-					mobileMenu.style.top = '2.5rem';
-				}
-			}
-
-			scrollPage = window.scrollY;
-		};
-
 		window.addEventListener('scroll', handleScroll);
 		return () => window.removeEventListener('scroll', handleScroll);
-	}, []);
+	}, [handleScroll]);
 
 	return (
-		<NavBarContainer id="navbar">
+		<NavBarContainer reduceHeight={reduceHeight}>
 			<Logo />
 			<NavBarMenu />
 		</NavBarContainer>
