@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo } from 'react';
 import tw from 'twin.macro';
 
 const NavBarMenuItem = tw.li`
@@ -30,4 +30,4 @@ function MenuItems() {
 	);
 }
 
-export default MenuItems;
+export default memo(MenuItems);

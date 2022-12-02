@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo } from 'react';
 import tw from 'twin.macro';
 import CarLogoImg from 'assets/images/logo.svg';
 
@@ -32,4 +32,4 @@ function Logo() {
 	);
 }
 
-export default Logo;
+export default memo(Logo);

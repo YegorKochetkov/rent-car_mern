@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { memo, useState } from 'react';
 import { useMediaQuery } from 'react-responsive';
 import MenuItems from '../MenuItems/MenuItems';
 import tw from 'twin.macro';
@@ -57,7 +57,7 @@ function NavBarMenu() {
 				toggleMenu={toggleMobileMenu}
 				isOpen={isOpenMobileMenu}
 			/>
-			<MobileMenu isOpen={isOpenMobileMenu} id="mobileMenu">
+			<MobileMenu isOpen={isOpenMobileMenu}>
 				<MenuItems />
 			</MobileMenu>
 		</Wrapper>
@@ -68,4 +68,4 @@ function NavBarMenu() {
 	);
 }
 
-export default NavBarMenu;
+export default memo(NavBarMenu);
