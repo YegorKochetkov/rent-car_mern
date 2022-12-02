@@ -9,7 +9,6 @@ const TopSectionContainer = tw.div`
 	justify-between
 	w-full
 	max-w-screen-2xl
-	mt-16
 	mb-20
 	px-3
 	lg:px-12
