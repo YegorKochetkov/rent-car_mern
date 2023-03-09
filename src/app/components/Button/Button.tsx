@@ -5,6 +5,7 @@ type ButtonProps = {
 	theme?: 'outlined' | 'filled';
 	children?: ReactNode;
 	classes?: string;
+	buttonType?: 'button' | 'submit' | 'reset' | undefined;
 };
 
 const BaseButton = tw.button`
@@ -13,7 +14,7 @@ const BaseButton = tw.button`
 	text-inherit
 	text-white
 	font-semibold
-	bg-red-600
+[&[type]]:bg-red-600
 	border
 	rounded-md
 	transition-all
@@ -26,25 +27,25 @@ const BaseButton = tw.button`
 `;
 
 const Outlined = tw(BaseButton)`
-	bg-transparent
+	[&[type]]:bg-transparent
 	text-black
 	hover:text-white
-	hover:bg-red-600
+	hover:[&[type]]:bg-red-600
 	[&>span]:text-red-600
 	hover:[&>span]:text-black
 `;
 
 function Button(props: ButtonProps) {
-	const { theme, children, classes } = props;
+	const { theme, children, classes, buttonType = 'button' } = props;
 	if (theme === 'outlined')
 		return (
-			<Outlined className={classes} data-testid="button">
+			<Outlined className={classes} data-testid="button" type={buttonType}>
 				{children}
 			</Outlined>
 		);
 
 	return (
-		<BaseButton className={classes} data-testid="button">
+		<BaseButton className={classes} data-testid="button" type={buttonType}>
 			{children}
 		</BaseButton>
 	);
