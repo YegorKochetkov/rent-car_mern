@@ -1,5 +1,8 @@
 export type CarType = {
-	thumbnail: string;
+	thumbnail: {
+		xs: string;
+		sm: string;
+	};
 	name: string;
 	mileage: string;
 	gearType: string;

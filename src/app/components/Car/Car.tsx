@@ -1,8 +1,8 @@
-import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { CarType } from 'app/types/car';
+import React from 'react';
 import tw from 'twin.macro';
 import Button from '../Button/Button';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
 	faFillDrip,
 	faGears,
@@ -26,12 +26,12 @@ const CarContainer = tw.div`
 	[&_button]:w-[12em]
 	hover:[&_button]:w-[12em]
 	sm:[&_button]:w-full
-	hover:[&>span]:w-[5em]
-	sm:[&>span]:w-[14em]
-	hover:[&>span]:h-full
+	hover:[&>picture]:w-[5em]
+	sm:[&>picture]:w-[14em]
+	hover:[&>picture]:h-full
 `;
 
-const CarThumbnail = tw.span`
+const CarThumbnail = tw.picture`
 	absolute
 	inset-0
 	w-[5em]
@@ -126,7 +126,8 @@ function Car(props: CarType) {
 	return (
 		<CarContainer data-testid="card">
 			<CarThumbnail>
-				<img src={thumbnail} alt={`${name}`} />
+				<source srcSet={thumbnail.sm} media="(min-width: 640px)" />
+				<img src={thumbnail.xs} alt={`${name}`} />
 			</CarThumbnail>
 			<CarContent>
 				<CarName title={name}>{name}</CarName>

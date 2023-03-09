@@ -1,11 +1,26 @@
 import { CarType } from 'app/types/car';
+import AudiS3120 from '../../assets/images/audi_s3_120.png';
+import AudiS3 from '../../assets/images/audi_s3.png';
+import BMWM3120 from '../../assets/images/bmw_m3_120.png';
+import BMWM3 from '../../assets/images/bmw_m3.png';
+import HondaAccord120 from '../../assets/images/honda_accord_120.png';
+import HondaAccord from '../../assets/images/honda_accord.png';
+import HondaCRV120 from '../../assets/images/honda_crv_120.png';
+import HondaCRV from '../../assets/images/honda_crv.png';
+import JeepWrangler120 from '../../assets/images/jeep_wrangler_120.png';
+import JeepWrangler from '../../assets/images/jeep_wrangler.png';
+import LamborghiniUrus120 from '../../assets/images/lamborghini_urus_120.png';
+import LamborghiniUrus from '../../assets/images/lamborghini_urus.png';
+import RollRoyce120 from '../../assets/images/rolls_royce_120.png';
+import RollRoyce from '../../assets/images/rolls_royce.png';
+import TeslaM3120 from '../../assets/images/tesla_m3_120.png';
+import TeslaM3 from '../../assets/images/tesla_m3.png';
 
 export const Cars: CarType[] = [
 	{
 		name: 'Rolls-Royce Ghost',
 		mileage: '2k',
-		thumbnail:
-			'https://di-uploads-pod16.dealerinspire.com/competitionbmwofsmithtown/uploads/2021/07/2020-rolls-royce.png',
+		thumbnail: { xs: RollRoyce120, sm: RollRoyce },
 		dailyPrice: 150,
 		monthlyPrice: 3600,
 		gearType: 'Auto',
@@ -14,8 +29,7 @@ export const Cars: CarType[] = [
 	{
 		name: 'Tesla Model 3',
 		mileage: '13k',
-		thumbnail:
-			'https://images.enervee.com/image/upload/v1551603319/cars/us/img_4155044801.png',
+		thumbnail: { xs: TeslaM3120, sm: TeslaM3 },
 		dailyPrice: 90,
 		monthlyPrice: 2200,
 		gearType: 'Auto',
@@ -24,8 +38,7 @@ export const Cars: CarType[] = [
 	{
 		name: 'Audi S3',
 		mileage: '10k',
-		thumbnail:
-			'https://inventory-dmg.assets-cdk.com/chrome/386857/cc_2017AUC320001_01_640_2Y2Y.png',
+		thumbnail: { xs: AudiS3120, sm: AudiS3 },
 		dailyPrice: 70,
 		monthlyPrice: 1600,
 		gearType: 'Auto',
@@ -34,8 +47,7 @@ export const Cars: CarType[] = [
 	{
 		name: 'BMW M3',
 		mileage: '10k',
-		thumbnail:
-			'https://inventory-dmg.assets-cdk.com/chrome/406020/cc_2020BMC890009_01_640_300.png',
+		thumbnail: { xs: BMWM3120, sm: BMWM3 },
 		dailyPrice: 70,
 		monthlyPrice: 1600,
 		gearType: 'Auto',
@@ -44,8 +56,7 @@ export const Cars: CarType[] = [
 	{
 		name: 'Honda CR-V',
 		mileage: '20k',
-		thumbnail:
-			'https://www.pricelanka.lk/wp-content/uploads/2021/04/Honda-CR-V.png',
+		thumbnail: { xs: HondaCRV120, sm: HondaCRV },
 		dailyPrice: 60,
 		monthlyPrice: 1600,
 		gearType: 'Auto',
@@ -54,8 +65,7 @@ export const Cars: CarType[] = [
 	{
 		name: 'Honda Accord',
 		mileage: '20k',
-		thumbnail:
-			'https://otohondaconghoa.net/wp-content/uploads/2018/01/accrord.png',
+		thumbnail: { xs: HondaAccord120, sm: HondaAccord },
 		dailyPrice: 50,
 		monthlyPrice: 1500,
 		gearType: 'Auto',
@@ -64,8 +74,7 @@ export const Cars: CarType[] = [
 	{
 		name: 'Jeep Wrangler',
 		mileage: '20k',
-		thumbnail:
-			'https://di-uploads-pod11.dealerinspire.com/newbergdodgechryslerjeep/uploads/2018/12/HP_ModelSlide_640x480_2_JeepWrangler.png',
+		thumbnail: { xs: JeepWrangler120, sm: JeepWrangler },
 		dailyPrice: 60,
 		monthlyPrice: 1700,
 		gearType: 'Auto',
@@ -74,8 +83,7 @@ export const Cars: CarType[] = [
 	{
 		name: 'Lamborghini Urus',
 		mileage: '5k',
-		thumbnail:
-			'https://mractravel.blob.core.windows.net/mrac-media/2019/05/LamborghiniUrus.png',
+		thumbnail: { xs: LamborghiniUrus120, sm: LamborghiniUrus },
 		dailyPrice: 150,
 		monthlyPrice: 3800,
 		gearType: 'Auto',

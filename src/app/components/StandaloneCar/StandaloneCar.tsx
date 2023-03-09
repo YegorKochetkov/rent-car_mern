@@ -1,7 +1,8 @@
 import React from 'react';
 import tw from 'twin.macro';
 import BlobImage from '../../../assets/images/blob.svg';
-import Car from '../../../assets/images/mclaren-orange-big.png';
+import CarPng from '../../../assets/images/mclaren.png';
+import CarWebp from '../../../assets/images/mclaren.webp';
 
 const Wrapper = tw.div`
 	relative
@@ -21,7 +22,7 @@ const BlobContainer = tw.div`
 	[&>img]:max-h-max
 `;
 
-const CarContainer = tw.div`
+const CarContainer = tw.picture`
 	absolute
 	w-[20em]
 	sm:w-[28em]
@@ -37,7 +38,8 @@ function McLaren() {
 				<img src={BlobImage} alt="abstract round shapeless background" />
 			</BlobContainer>
 			<CarContainer>
-				<img src={Car} alt="orange McLaren" />
+				<source srcSet={CarWebp} type="image/webp" />
+				<img src={CarPng} alt="orange McLaren" />
 			</CarContainer>
 		</Wrapper>
 	);

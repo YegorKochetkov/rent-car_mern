@@ -1,6 +1,7 @@
 import React from 'react';
 import tw from 'twin.macro';
-import JeepImg from '../../assets/images/jeep.png';
+import JeepPng from '../../assets/images/jeep.png';
+import JeepWebp from '../../assets/images/jeep.webp';
 
 const AboutUsContainer = tw.div`
 	flex
@@ -16,7 +17,7 @@ const AboutUsContainer = tw.div`
 	bg-white
 `;
 
-const CarContainer = tw.div`
+const CarContainer = tw.picture`
 	relative
 	flex
 	justify-center
@@ -57,7 +58,8 @@ function AboutUs() {
 	return (
 		<AboutUsContainer>
 			<CarContainer>
-				<img src={JeepImg} alt="Red Jeep Wrangler" />
+				<source srcSet={JeepWebp} type="image/webp" />
+				<img src={JeepPng} alt="Red Jeep Wrangler" />
 			</CarContainer>
 			<InfoContainer>
 				<Title>Feel the best experience with out rent deal</Title>
