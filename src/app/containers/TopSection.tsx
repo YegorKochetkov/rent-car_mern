@@ -1,8 +1,8 @@
-import React from 'react';
+import Button from 'app/components/Button/Button';
 import Slogan from 'app/components/Slogan/Slogan';
 import McLaren from 'app/components/StandaloneCar/StandaloneCar';
+import React from 'react';
 import tw from 'twin.macro';
-import Button from 'app/components/Button/Button';
 
 const TopSectionContainer = tw.div`
 	flex
@@ -27,7 +27,10 @@ const RightContainer = tw.div`
 	w-1/2
 	z-[-1]
 `;
-const ButtonsContainer = tw.div`flex flex-wrap justify-start gap-2 w-full text-base`;
+
+const ButtonsContainer = tw.div`
+	flex flex-wrap justify-start gap-2 w-full text-base
+`;
 
 function TopSection() {
 	return (

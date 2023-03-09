@@ -1,8 +1,8 @@
 import React, { useCallback, useEffect, useState } from 'react';
-import tw from 'twin.macro';
-import NavBarMenu from '../components/NavBarMenu/NavBarMenu';
-import Logo from '../components/Logo/Logo';
 import styled from 'styled-components';
+import tw from 'twin.macro';
+import Logo from '../components/Logo/Logo';
+import NavBarMenu from '../components/NavBarMenu/NavBarMenu';
 
 const NavBarContainer = styled.menu<{ reduceHeight: boolean }>`
 	${tw`
