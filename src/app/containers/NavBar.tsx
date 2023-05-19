@@ -1,4 +1,5 @@
-import React, { useCallback, useEffect, useState } from 'react';
+import { useMotionValueEvent, useScroll } from 'framer-motion';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import tw from 'twin.macro';
 import Logo from '../components/Logo/Logo';
@@ -29,26 +30,30 @@ const NavBarContainer = styled.menu<{ reduceHeight: boolean }>`
 		props.reduceHeight ? tw`h-10 [ul]:top-9` : tw`h-14 [ul]:top-10`}
 `;
 
+const scrollThreshold = 5;
+
 function NavBar() {
-	const [offsetY, setOffsetY] = useState(0);
+	const { scrollY } = useScroll();
 	const [reduceHeight, setReduceHeight] = useState(false);
 
-	const handleScroll = useCallback(() => {
-		if (window.scrollY - offsetY >= 10) {
-			setReduceHeight(true);
+	useMotionValueEvent(scrollY, 'change', () => {
+		const prev = scrollY.getPrevious();
+		const next = scrollY.get();
+
+		if (next - prev > scrollThreshold) {
+			if (reduceHeight === false) {
+				setReduceHeight(true);
+			}
+			return;
 		}
 
-		if (window.scrollY - offsetY <= -10) {
-			setReduceHeight(false);
+		if (prev - next > scrollThreshold) {
+			if (reduceHeight === true) {
+				setReduceHeight(false);
+			}
+			return;
 		}
-
-		setOffsetY(window.scrollY);
-	}, [offsetY]);
-
-	useEffect(() => {
-		window.addEventListener('scroll', handleScroll);
-		return () => window.removeEventListener('scroll', handleScroll);
-	}, [handleScroll]);
+	});
 
 	return (
 		<NavBarContainer reduceHeight={reduceHeight}>
