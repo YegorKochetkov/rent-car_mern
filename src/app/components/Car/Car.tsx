@@ -24,7 +24,7 @@ const CarContainer = tw.div`
 	[&_button]:transition-all
 	[&_button]:duration-500
 	[&_button]:text-base
-	[&_button]:w-[12em]
+	[&_button]:w-full
 	hover:[&_button]:w-[12em]
 	sm:[&_button]:w-full
 	hover:[&>picture]:w-[5em]
