@@ -1,7 +1,8 @@
-import React from 'react';
-import tw from 'twin.macro';
 import Car from 'app/components/Car/Car';
 import { Cars } from 'app/helpers/cars';
+import { motion, Variants } from 'framer-motion';
+import React from 'react';
+import tw from 'twin.macro';
 
 const TopCarContainer = tw.div`
 	flex
@@ -34,15 +35,31 @@ const CarsContainer = tw.div`
 	transition-all
 `;
 
+const motionVariants: Variants = {
+	onscreen: {
+		transition: { staggerChildren: 0.05, delayChildren: 0.2 },
+	},
+	offscreen: {
+		transition: { staggerChildren: 0.05, staggerDirection: -1 },
+	},
+};
+
 function TopCars() {
 	return (
 		<TopCarContainer>
 			<Title>Explore our top deals</Title>
-			<CarsContainer>
-				{Cars.map((car) => (
-					<Car {...car} key={car.name} />
-				))}
-			</CarsContainer>
+			<motion.div
+				variants={motionVariants}
+				initial="offscreen"
+				whileInView="onscreen"
+				viewport={{ amount: 0.2 }}
+			>
+				<CarsContainer>
+					{Cars.map((car) => (
+						<Car {...car} key={car.name} />
+					))}
+				</CarsContainer>
+			</motion.div>
 		</TopCarContainer>
 	);
 }

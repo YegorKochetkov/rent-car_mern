@@ -1,5 +1,6 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { CarType } from 'app/types/car';
+import { motion, Variants } from 'framer-motion';
 import React from 'react';
 import tw from 'twin.macro';
 import Button from '../Button/Button';
@@ -119,46 +120,65 @@ const CarContent = tw.div`
 	items-end
 `;
 
+const carCardVariants: Variants = {
+	onscreen: {
+		y: 0,
+		opacity: 1,
+		transition: {
+			y: { stiffness: 1000, velocity: -100 },
+		},
+	},
+	offscreen: {
+		y: 50,
+		opacity: 0,
+		transition: {
+			y: { stiffness: 1000 },
+		},
+	},
+};
+
 function Car(props: CarType) {
 	const { name, thumbnail, dailyPrice, monthlyPrice, mileage, gearType, gas } =
 		props;
 
 	return (
-		<CarContainer data-testid="card">
-			<CarThumbnail>
-				<source srcSet={thumbnail.sm} media="(min-width: 640px)" />
-				<img src={thumbnail.xs} alt={`${name}`} />
-			</CarThumbnail>
-			<CarContent>
-				<CarName title={name}>{name}</CarName>
-				<PricesContainer>
-					<DailyPrice>
-						{dailyPrice}
-						<span>/Day</span>
-					</DailyPrice>
-					<MonthlyPrice>
-						{monthlyPrice}
-						<span>/Month</span>
-					</MonthlyPrice>
-				</PricesContainer>
-				<Separator />
-				<CarDetailsContainer>
-					<CarDetails>
-						<FontAwesomeIcon icon={faTachometerAlt} />
-						<CarInfo>{mileage}</CarInfo>
-					</CarDetails>
-					<CarDetails>
-						<FontAwesomeIcon icon={faGears} />
-						<CarInfo>{gearType}</CarInfo>
-					</CarDetails>
-					<CarDetails>
-						<FontAwesomeIcon icon={faFillDrip} />
-						<CarInfo>{gas}</CarInfo>
-					</CarDetails>
-				</CarDetailsContainer>
-				<Button>Rent now</Button>
-			</CarContent>
-		</CarContainer>
+		<motion.div variants={carCardVariants}>
+			<CarContainer data-testid="card">
+				<CarThumbnail>
+					<source srcSet={thumbnail.sm} media="(min-width: 640px)" />
+					<img src={thumbnail.xs} alt={`${name}`} />
+				</CarThumbnail>
+				<CarContent>
+					<CarName title={name}>{name}</CarName>
+					<PricesContainer>
+						<DailyPrice>
+							{dailyPrice}
+							<span>/Day</span>
+						</DailyPrice>
+						<MonthlyPrice>
+							{monthlyPrice}
+							<span>/Month</span>
+						</MonthlyPrice>
+					</PricesContainer>
+					<Separator />
+					<CarDetailsContainer>
+						<CarDetails>
+							<FontAwesomeIcon icon={faTachometerAlt} />
+							<CarInfo>{mileage}</CarInfo>
+						</CarDetails>
+						<CarDetails>
+							<FontAwesomeIcon icon={faGears} />
+							<CarInfo>{gearType}</CarInfo>
+						</CarDetails>
+						<CarDetails>
+							<FontAwesomeIcon icon={faFillDrip} />
+							<CarInfo>{gas}</CarInfo>
+						</CarDetails>
+					</CarDetailsContainer>
+					<Button>Rent now</Button>
+				</CarContent>
+			</CarContainer>
+		</motion.div>
 	);
 }
 

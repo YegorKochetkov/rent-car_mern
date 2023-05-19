@@ -1,6 +1,7 @@
 import Button from 'app/components/Button/Button';
 import Slogan from 'app/components/Slogan/Slogan';
 import McLaren from 'app/components/StandaloneCar/StandaloneCar';
+import { motion } from 'framer-motion';
 import React from 'react';
 import tw from 'twin.macro';
 
@@ -35,19 +36,31 @@ const ButtonsContainer = tw.div`
 function TopSection() {
 	return (
 		<TopSectionContainer>
-			<LeftContainer>
-				<Slogan />
-				<ButtonsContainer>
-					<Button>
-						Book your <span>Ride</span>
-					</Button>
-					<Button theme="outlined">
-						Sell your <span>Car</span>
-					</Button>
-				</ButtonsContainer>
-			</LeftContainer>
+			<motion.div
+				initial={{ opacity: 0, x: -200 }}
+				animate={{ opacity: 1, x: 0 }}
+				transition={{ duration: 0.5 }}
+			>
+				<LeftContainer>
+					<Slogan />
+					<ButtonsContainer>
+						<Button>
+							Book your <span>Ride</span>
+						</Button>
+						<Button theme="outlined">
+							Sell your <span>Car</span>
+						</Button>
+					</ButtonsContainer>
+				</LeftContainer>
+			</motion.div>
 			<RightContainer>
-				<McLaren />
+				<motion.div
+					initial={{ opacity: 0, x: 0 }}
+					animate={{ opacity: 1, x: -200 }}
+					transition={{ duration: 0.5 }}
+				>
+					<McLaren />
+				</motion.div>
 			</RightContainer>
 		</TopSectionContainer>
 	);
