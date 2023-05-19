@@ -45,9 +45,9 @@
 		"eject": "react-scripts eject",
 		"prepare": "husky install",
 		"add-pre-commit": "npx husky add .husky/pre-commit \"npm run lint-stage\"",
-		"format": "npx prettier --write . --ignore-path .gitignore",
-		"lint:write": "npx eslint ./src/**/* --fix",
-		"fix-style": "npm run format && npm run lint:write",
+		"format": "prettier --write src/ --ignore-path .gitignore",
+		"lint": "eslint --fix . --ignore-path .gitignore",
+		"format-lint": "npm run format && npm run lint",
 		"lint-stage": "npx lint-staged",
 		"predeploy": "npm run build",
 		"deploy": "gh-pages -d build"
@@ -87,15 +87,14 @@
 					"semi": [
 						"error",
 						"always"
-					]
+					],
+					"eol-last": "off"
 				}
 			}
 		]
 	},
 	"lint-staged": {
-		"src/**/*.{js,mjs,ts,tsx}": [
-			"npm run fix-style"
-		]
+		"*.{ts, tsx}": "npm run format-lint"
 	},
 	"browserslist": {
 		"production": [
