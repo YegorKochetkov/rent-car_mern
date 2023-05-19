@@ -40,18 +40,12 @@ function NavBar() {
 		const prev = scrollY.getPrevious();
 		const next = scrollY.get();
 
-		if (next - prev > scrollThreshold) {
-			if (reduceHeight === false) {
-				setReduceHeight(true);
-			}
-			return;
+		if (next - prev > scrollThreshold && reduceHeight === false) {
+			setReduceHeight(true);
 		}
 
-		if (prev - next > scrollThreshold) {
-			if (reduceHeight === true) {
-				setReduceHeight(false);
-			}
-			return;
+		if (prev - next > scrollThreshold && reduceHeight === true) {
+			setReduceHeight(false);
 		}
 	});
 
