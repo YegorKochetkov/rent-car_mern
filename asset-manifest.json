@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/rent-car_mern/static/css/main.1a1b0222.css",
-    "main.js": "/rent-car_mern/static/js/main.62d6b5fa.js",
+    "main.css": "/rent-car_mern/static/css/main.84173ba4.css",
+    "main.js": "/rent-car_mern/static/js/main.05921d64.js",
     "static/js/787.0d6199b8.chunk.js": "/rent-car_mern/static/js/787.0d6199b8.chunk.js",
     "static/media/jeep.png": "/rent-car_mern/static/media/jeep.18461d13eb608d076dda.png",
     "static/media/jeep.webp": "/rent-car_mern/static/media/jeep.a14bb4baf4d33ec99d38.webp",
@@ -23,15 +23,15 @@
     "static/media/jeep_wrangler_120.png": "/rent-car_mern/static/media/jeep_wrangler_120.a4b3bd2373137ed51853.png",
     "static/media/tesla_m3_120.png": "/rent-car_mern/static/media/tesla_m3_120.ed2dba6ed77721ed79b9.png",
     "static/media/rolls_royce_120.png": "/rent-car_mern/static/media/rolls_royce_120.f4ff0dfbcb9dc6fc119d.png",
-    "static/media/logo.svg": "/rent-car_mern/static/media/logo.71b8227f34ccc90ad279f04960ad293f.svg",
+    "static/media/logo.svg": "/rent-car_mern/static/media/logo.a3baf556eab895af86875298d97756f1.svg",
     "index.html": "/rent-car_mern/index.html",
-    "static/media/blob.svg": "/rent-car_mern/static/media/blob.f2195ec62f0748be8f89a49cc63bf8b9.svg",
-    "main.1a1b0222.css.map": "/rent-car_mern/static/css/main.1a1b0222.css.map",
-    "main.62d6b5fa.js.map": "/rent-car_mern/static/js/main.62d6b5fa.js.map",
+    "static/media/blob.svg": "/rent-car_mern/static/media/blob.1e0bff3a3abf52dbf26af519c7a12408.svg",
+    "main.84173ba4.css.map": "/rent-car_mern/static/css/main.84173ba4.css.map",
+    "main.05921d64.js.map": "/rent-car_mern/static/js/main.05921d64.js.map",
     "787.0d6199b8.chunk.js.map": "/rent-car_mern/static/js/787.0d6199b8.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.1a1b0222.css",
-    "static/js/main.62d6b5fa.js"
+    "static/css/main.84173ba4.css",
+    "static/js/main.05921d64.js"
   ]
 }
