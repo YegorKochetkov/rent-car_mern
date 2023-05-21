@@ -1,15 +1,15 @@
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useState } from 'react';
-import tw from 'twin.macro';
+import Calendar from 'react-calendar';
 import styled from 'styled-components';
+import tw from 'twin.macro';
+import Button from '../Button/Button';
+import './Calendar.css';
 import {
 	faCalendarAlt,
 	faCaretDown,
 	faCaretUp,
 } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import Calendar from 'react-calendar';
-import Button from '../Button/Button';
-import './Calendar.css';
 
 const CardContainer = tw.div`
 	relative
@@ -86,6 +86,7 @@ const DateCalendar = styled(Calendar)`
 		w-fit
 		max-w-none
 		select-none
+		z-10
 	`}
 `;
 
