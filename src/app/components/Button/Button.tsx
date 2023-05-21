@@ -14,7 +14,7 @@ const BaseButton = tw.button`
 	text-inherit
 	text-white
 	font-semibold
-[&[type]]:bg-red-600
+	[&[type]]:bg-red-600
 	border
 	rounded-md
 	transition-all
@@ -37,6 +37,7 @@ const Outlined = tw(BaseButton)`
 
 function Button(props: ButtonProps) {
 	const { theme, children, classes, buttonType = 'button' } = props;
+
 	if (theme === 'outlined')
 		return (
 			<Outlined className={classes} data-testid="button" type={buttonType}>

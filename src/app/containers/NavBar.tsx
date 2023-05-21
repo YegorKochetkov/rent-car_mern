@@ -24,7 +24,7 @@ const NavBarContainer = styled.menu<{ reduceHeight: boolean }>`
 		shadow-sm
 		transition-all
 		duration-500
-		z-10
+		z-50
 	`}
 	${(props) =>
 		props.reduceHeight ? tw`h-10 [ul]:top-9` : tw`h-14 [ul]:top-10`}
