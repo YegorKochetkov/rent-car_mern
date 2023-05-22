@@ -78,8 +78,7 @@
 						"tab"
 					],
 					"linebreak-style": [
-						"error",
-						"unix"
+						"off"
 					],
 					"quotes": [
 						"error",
@@ -88,8 +87,7 @@
 					"semi": [
 						"error",
 						"always"
-					],
-					"eol-last": "off"
+					]
 				}
 			}
 		]
