@@ -77,7 +77,7 @@ export const Cars: CarType[] = [
 		thumbnail: { xs: JeepWrangler120, sm: JeepWrangler },
 		dailyPrice: 60,
 		monthlyPrice: 1700,
-		gearType: 'Auto',
+		gearType: 'Manual',
 		gas: 'Diesel',
 	},
 	{

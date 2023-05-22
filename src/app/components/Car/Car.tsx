@@ -90,8 +90,8 @@ const CarDetailsContainer = tw.div`
 	flex-wrap
 	justify-between
 	w-[8em]
-	gap-x-3
-	mb-8
+	mt-1
+	mb-7
 `;
 
 const CarDetails = tw.p`
