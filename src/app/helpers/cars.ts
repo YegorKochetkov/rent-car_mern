@@ -50,7 +50,7 @@ export const Cars: CarType[] = [
 		thumbnail: { xs: BMWM3120, sm: BMWM3 },
 		dailyPrice: 70,
 		monthlyPrice: 1600,
-		gearType: 'Auto',
+		gearType: 'Manual',
 		gas: 'Petrol',
 	},
 	{
