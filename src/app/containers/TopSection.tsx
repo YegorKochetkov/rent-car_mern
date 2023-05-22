@@ -6,8 +6,8 @@ import React from 'react';
 import tw from 'twin.macro';
 
 const TopSectionContainer = tw.div`
-	flex
-	justify-between
+	grid
+	grid-cols-2
 	w-full
 	max-w-screen-2xl
 	mb-20
@@ -19,13 +19,11 @@ const LeftContainer = tw.div`
 	flex
 	flex-col
 	gap-4
-	w-1/2
 `;
 
 const RightContainer = tw.div`
 	flex
 	flex-col
-	w-1/2
 	z-[-1]
 `;
 
@@ -53,15 +51,15 @@ function TopSection() {
 					</ButtonsContainer>
 				</LeftContainer>
 			</motion.div>
-			<RightContainer>
-				<motion.div
-					initial={{ opacity: 0, x: 0 }}
-					animate={{ opacity: 1, x: -200 }}
-					transition={{ duration: 0.5 }}
-				>
+			<motion.div
+				initial={{ opacity: 0, x: 200 }}
+				animate={{ opacity: 1, x: 0 }}
+				transition={{ duration: 0.5, delay: 0.2 }}
+			>
+				<RightContainer>
 					<McLaren />
-				</motion.div>
-			</RightContainer>
+				</RightContainer>
+			</motion.div>
 		</TopSectionContainer>
 	);
 }
