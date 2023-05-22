@@ -14,7 +14,8 @@ const CarContainer = tw.div`
 	relative
 	grid
 	grid-rows-[repeat(5, 1fr)]
-	w-[14em]
+	w-[12em]
+	sm:w-[15em]
 	h-[9.5em]
 	p-3
 	rounded-md
@@ -24,11 +25,11 @@ const CarContainer = tw.div`
 	[&_button]:transition-all
 	[&_button]:duration-500
 	[&_button]:text-base
-	[&_button]:w-[12em]
+	[&_button]:w-[9em]
 	sm:[&&_button]:w-full
-	sm:hover:[&&_button]:w-[12em]
+	sm:hover:[&&_button]:w-[13.5em]
 	hover:[&>picture]:w-[5em]
-	sm:[&>picture]:w-[14em]
+	sm:[&>picture]:w-[15em]
 	hover:[&>picture]:h-full
 `;
 
@@ -89,9 +90,11 @@ const CarDetailsContainer = tw.div`
 	flex
 	flex-wrap
 	justify-between
-	w-[8em]
+	w-[6em]
+	sm:w-[9em]
 	mt-1
-	mb-7
+	mb-3
+	sm:mb-7
 `;
 
 const CarDetails = tw.p`
@@ -108,7 +111,7 @@ const CarInfo = tw.span`
 `;
 
 const Separator = tw.div`
-	w-[8em]
+	w-[9em]
 	h-[1px]
 	flex
 	bg-gray-300

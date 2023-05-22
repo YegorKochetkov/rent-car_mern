@@ -82,7 +82,7 @@ const DateCalendar = styled(Calendar)`
 		absolute
 		top-[7em]
 		sm:top-[3.5em]
-		left-[-0.5em]
+		left-0
 		w-fit
 		max-w-none
 		select-none

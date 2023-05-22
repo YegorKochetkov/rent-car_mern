@@ -30,7 +30,7 @@ const InfoContainer = tw.div`
 	flex
 	flex-col
 	m-auto
-	w-[66%]
+	w-[75%]
 	sm:min-w-[50%]
 	ml-auto
 `;
