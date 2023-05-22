@@ -1,8 +1,9 @@
-import React from 'react';
 import { render, screen } from '@testing-library/react';
-import NavBar from 'app/containers/NavBar';
 import HomePage from 'app/containers/HomePage';
+import NavBar from 'app/containers/NavBar';
 import TopSection from 'app/containers/TopSection';
+import React from 'react';
+import 'react-intersection-observer/test-utils';
 
 test('render menu', () => {
 	render(<NavBar />);
