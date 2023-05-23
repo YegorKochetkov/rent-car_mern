@@ -1,15 +1,15 @@
+import BookingStep from 'app/components/BookingStep/BookingStep';
+import { SCREENS } from 'app/helpers/screens';
 import React from 'react';
+import AliceCarousel from 'react-alice-carousel';
+import 'react-alice-carousel/lib/alice-carousel.css';
+import { useMediaQuery } from 'react-responsive';
+import tw from 'twin.macro';
 import {
 	faCalendarAlt,
 	faCarSide,
 	faMapMarkedAlt,
 } from '@fortawesome/free-solid-svg-icons';
-import tw from 'twin.macro';
-import BookingStep from 'app/components/BookingStep/BookingStep';
-import { useMediaQuery } from 'react-responsive';
-import { SCREENS } from 'app/helpers/screens';
-import AliceCarousel from 'react-alice-carousel';
-import 'react-alice-carousel/lib/alice-carousel.css';
 
 const Wrapper = tw.div`
 	w-full
@@ -63,7 +63,7 @@ function BookingSteps() {
 			) : (
 				<StepsContainer>
 					{steps.map((step, index) => (
-						<div key={index}>{step}</div>
+						<p key={index}>{step}</p>
 					))}
 				</StepsContainer>
 			)}

@@ -52,7 +52,7 @@ function TopCars() {
 				variants={motionVariants}
 				initial="offscreen"
 				whileInView="onscreen"
-				viewport={{ amount: 0.2 }}
+				viewport={{ once: true, amount: 0.1 }}
 			>
 				<CarsContainer>
 					{Cars.map((car) => (
