@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/rent-car_mern/static/css/main.feece82b.css",
-    "main.js": "/rent-car_mern/static/js/main.5ffb7bdd.js",
+    "main.css": "/rent-car_mern/static/css/main.46f10287.css",
+    "main.js": "/rent-car_mern/static/js/main.ce014b22.js",
     "static/js/787.0d6199b8.chunk.js": "/rent-car_mern/static/js/787.0d6199b8.chunk.js",
     "static/media/jeep.png": "/rent-car_mern/static/media/jeep.18461d13eb608d076dda.png",
     "static/media/mclaren.png": "/rent-car_mern/static/media/mclaren.46e3c615f2d4c2513ce5.png",
@@ -26,12 +26,12 @@
     "static/media/logo.svg": "/rent-car_mern/static/media/logo.a3baf556eab895af86875298d97756f1.svg",
     "index.html": "/rent-car_mern/index.html",
     "static/media/blob.svg": "/rent-car_mern/static/media/blob.1e0bff3a3abf52dbf26af519c7a12408.svg",
-    "main.feece82b.css.map": "/rent-car_mern/static/css/main.feece82b.css.map",
-    "main.5ffb7bdd.js.map": "/rent-car_mern/static/js/main.5ffb7bdd.js.map",
+    "main.46f10287.css.map": "/rent-car_mern/static/css/main.46f10287.css.map",
+    "main.ce014b22.js.map": "/rent-car_mern/static/js/main.ce014b22.js.map",
     "787.0d6199b8.chunk.js.map": "/rent-car_mern/static/js/787.0d6199b8.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.feece82b.css",
-    "static/js/main.5ffb7bdd.js"
+    "static/css/main.46f10287.css",
+    "static/js/main.ce014b22.js"
   ]
 }
