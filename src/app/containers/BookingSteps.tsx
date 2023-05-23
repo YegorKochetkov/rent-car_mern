@@ -63,7 +63,7 @@ function BookingSteps() {
 			) : (
 				<StepsContainer>
 					{steps.map((step, index) => (
-						<p key={index}>{step}</p>
+						<div key={index}>{step}</div>
 					))}
 				</StepsContainer>
 			)}
