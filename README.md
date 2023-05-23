@@ -12,7 +12,7 @@
 - [x] Create about us section on landingPage
 - [x] Create list of cars component
 - [x] Add responsive carousel component for booking steps
-- [ ] Create footer
+- [x] Create footer
 - [ ] Add loading spinners
 - [ ] Set up backend server project with Nest.js
 - [ ] Set up TypeORM with MySQL database on Nest.js
