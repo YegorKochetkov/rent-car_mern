@@ -1,3 +1,5 @@
+import { faEnvelope, faPhoneVolume } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Logo from 'app/components/Logo/Logo';
 import React from 'react';
 import tw from 'twin.macro';
@@ -34,7 +36,6 @@ const Links = tw.section`
 	[&>h3]:text-black
 	[&>h3]:uppercase
 	[&>h3]:mb-2
-	[&_li>a]:hover:text-red-600
 	[&>a>img]:h-6
 	[&_p_span]:text-red-600
 `;
@@ -51,8 +52,14 @@ const LinksContainer = tw.div`
 const LinksWrapper = tw.ul`
 	flex
 	flex-wrap
+	[&_li]:flex
+	[&_li]:items-center
 	[&_li]:mr-5
 	[&_li]:mb-2
+	[&_li>a]:hover:text-red-600
+	[&_li>svg]:mr-2
+	[&_li>svg]:text-red-600
+
 `;
 
 function FooterSection() {
@@ -85,9 +92,11 @@ function FooterSection() {
 					<h3>Contacts</h3>
 					<LinksWrapper>
 						<li>
+							<FontAwesomeIcon icon={faPhoneVolume} />{' '}
 							<a href="tel:">(800) 555-0123</a>
 						</li>
 						<li>
+							<FontAwesomeIcon icon={faEnvelope} />{' '}
 							<a href="mailto:">rentcar@company.com</a>
 						</li>
 					</LinksWrapper>
