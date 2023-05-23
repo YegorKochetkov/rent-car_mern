@@ -33,7 +33,7 @@ const Links = tw.section`
 	[&>h3]:text-black
 	[&>h3]:uppercase
 	[&>h3]:mb-2
-	[&>a]:hover:text-red-600
+	[&_li>a]:hover:text-red-600
 	[&>a>img]:h-6
 	[&_p_span]:text-red-600
 `;
@@ -50,7 +50,8 @@ const LinksContainer = tw.div`
 const LinksWrapper = tw.ul`
 	flex
 	flex-wrap
-	gap-5
+	[&_li]:mr-5
+	[&_li]:mb-2
 `;
 
 function FooterSection() {
