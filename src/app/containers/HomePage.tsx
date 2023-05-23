@@ -1,11 +1,12 @@
+import BookCard from 'app/components/BookCard/BookCard';
+import NavBar from 'app/containers/NavBar';
 import React from 'react';
 import tw from 'twin.macro';
-import NavBar from 'app/containers/NavBar';
-import TopSection from './TopSection';
-import BookCard from 'app/components/BookCard/BookCard';
-import BookingSteps from './BookingSteps';
 import AboutUs from './AboutUs';
+import BookingSteps from './BookingSteps';
+import FooterSection from './FooterSection';
 import TopCars from './TopCars';
+import TopSection from './TopSection';
 
 const PageContainer = tw.div`
 	flex
@@ -24,6 +25,7 @@ function HomePage() {
 			<BookingSteps />
 			<AboutUs />
 			<TopCars />
+			<FooterSection />
 		</PageContainer>
 	);
 }
