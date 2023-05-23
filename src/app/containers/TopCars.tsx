@@ -12,7 +12,7 @@ const TopCarContainer = tw.div`
 	max-w-screen-2xl
 	px-3
 	lg:px-12
-	mb-10
+	mb-12
 `;
 
 const Title = tw.h2`
