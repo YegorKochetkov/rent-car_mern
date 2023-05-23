@@ -40,8 +40,8 @@ const Links = tw.section`
 `;
 
 const LinksWrapper = tw.div`
-	flex
-	flex-wrap
+	grid
+	[grid-template-columns:repeat(auto-fit,minmax(30%,1fr))]
 	justify-start
 	gap-8
 	w-full
