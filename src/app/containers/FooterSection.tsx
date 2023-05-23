@@ -28,7 +28,6 @@ const AboutUsContainer = tw.section`
 const Links = tw.section`
 	flex
 	flex-col
-	gap-2
 	text-base
 	[&>h3]:text-lg
 	[&>h3]:text-black
@@ -39,13 +38,19 @@ const Links = tw.section`
 	[&_p_span]:text-red-600
 `;
 
-const LinksWrapper = tw.div`
+const LinksContainer = tw.div`
 	grid
-	[grid-template-columns:repeat(auto-fit,minmax(30%,1fr))]
+	[grid-template-columns:repeat(auto-fit,minmax(12rem,1fr))]
 	justify-start
-	gap-8
+	gap-4
 	w-full
 	sm:w-auto
+`;
+
+const LinksWrapper = tw.ul`
+	flex
+	flex-wrap
+	gap-5
 `;
 
 function FooterSection() {
@@ -59,24 +64,44 @@ function FooterSection() {
 					quality cars and top rated services.
 				</p>
 			</AboutUsContainer>
-			<LinksWrapper>
+			<LinksContainer>
 				<Links>
 					<h3>Help</h3>
-					<a href="/#">Support</a>
-					<a href="/#">FAQ</a>
-					<a href="/#">Blog</a>
-				</Links>
-				<Links>
-					<h3>Legal</h3>
-					<a href="/#">Terms & Conditions</a>
-					<a href="/#">Privacy policy</a>
+					<LinksWrapper>
+						<li>
+							<a href="/#">Support</a>
+						</li>
+						<li>
+							<a href="/#">FAQ</a>
+						</li>
+						<li>
+							<a href="/#">Blog</a>
+						</li>
+					</LinksWrapper>
 				</Links>
 				<Links>
 					<h3>Contacts</h3>
-					<a href="tel:">(800) 555-0123</a>
-					<a href="mailto:">rentcar@company.com</a>
+					<LinksWrapper>
+						<li>
+							<a href="tel:">(800) 555-0123</a>
+						</li>
+						<li>
+							<a href="mailto:">rentcar@company.com</a>
+						</li>
+					</LinksWrapper>
 				</Links>
-			</LinksWrapper>
+				<Links>
+					<h3>Legal</h3>
+					<LinksWrapper>
+						<li>
+							<a href="/#">Terms & Conditions</a>
+						</li>
+						<li>
+							<a href="/#">Privacy policy</a>
+						</li>
+					</LinksWrapper>
+				</Links>
+			</LinksContainer>
 		</Footer>
 	);
 }
