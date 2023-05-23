@@ -21,6 +21,7 @@ const AboutUsContainer = tw.section`
 	gap-2
 	text-base
 	[&>a]:text-xl
+	[&>a]:w-fit
 	[&>a>img]:h-6
 	[&_p_span]:text-red-600
 `;
