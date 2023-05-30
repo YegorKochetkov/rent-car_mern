@@ -29,9 +29,37 @@ const CarContainer = tw.picture`
 	[&>img]:w-full
 	[&>img]:h-auto
 	[&>img]:max-h-max
+	[&>img]:relative
 `;
 
 function McLaren() {
+	const imgRef = React.useRef<HTMLImageElement>(null);
+
+	function parallax(event: MouseEvent) {
+		let width = window.innerWidth / 2;
+		let height = window.innerHeight / 2;
+
+		let moveX = event.clientX;
+		let moveY = event.clientY;
+
+		const thresholdX = 0.04;
+		const thresholdY = 0.02;
+
+		const shiftX = (moveX - width) * thresholdX;
+		const shiftY = (moveY - height) * thresholdY;
+
+		if (imgRef.current) {
+			imgRef.current.style.transform =
+				'translateX(' + shiftX + 'px) translateY(' + shiftY + 'px)';
+		}
+	}
+
+	React.useEffect(() => {
+		document.addEventListener('mousemove', parallax);
+
+		return () => document.removeEventListener('mousemove', parallax);
+	}, []);
+
 	return (
 		<Wrapper>
 			<BlobContainer>
@@ -39,7 +67,7 @@ function McLaren() {
 			</BlobContainer>
 			<CarContainer>
 				<source srcSet={CarWebp} type="image/webp" />
-				<img src={CarPng} alt="orange McLaren" />
+				<img src={CarPng} alt="orange McLaren" ref={imgRef} />
 			</CarContainer>
 		</Wrapper>
 	);
