@@ -13,6 +13,7 @@ const BlobContainer = tw.div`
 	-rotate-12
 	-left-[2em]
 	-top-[4em]
+	-z-20
 	w-[20em]
 	sm:-top-[13em]
 	sm:-left-[5em]
