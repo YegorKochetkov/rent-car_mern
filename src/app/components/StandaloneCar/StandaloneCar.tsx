@@ -10,7 +10,6 @@ const Wrapper = tw.div`
 
 const BlobContainer = tw.div`
 	absolute
-	-rotate-12
 	-left-[2em]
 	-top-[4em]
 	-z-20
