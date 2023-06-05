@@ -1,11 +1,11 @@
+import lockBodyScroll from 'app/helpers/lockBodyScroll';
+import { SCREENS } from 'app/helpers/screens';
 import React, { memo, useState } from 'react';
 import { useMediaQuery } from 'react-responsive';
-import MenuItems from '../MenuItems/MenuItems';
-import tw from 'twin.macro';
 import styled from 'styled-components';
-import { SCREENS } from 'app/helpers/screens';
-import lockBodyScroll from 'app/helpers/lockBodyScroll';
+import tw from 'twin.macro';
 import HamburgerButton from '../HamburgerButton/HamburgerButton';
+import MenuItems from '../MenuItems/MenuItems';
 
 const Wrapper = tw.div`relative flex justify-end w-full`;
 
