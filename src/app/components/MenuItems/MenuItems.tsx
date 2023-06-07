@@ -15,16 +15,16 @@ function MenuItems() {
 	return (
 		<React.Fragment>
 			<NavBarMenuItem>
-				<a href="/#">Home</a>
+				<a href={process.env.PUBLIC_URL + '/#'}>Home</a>
 			</NavBarMenuItem>
 			<NavBarMenuItem>
-				<a href="/#cars">Cars</a>
+				<a href={process.env.PUBLIC_URL + '/#cars'}>Cars</a>
 			</NavBarMenuItem>
 			<NavBarMenuItem>
-				<a href="/#">Services</a>
+				<a href={process.env.PUBLIC_URL + '/#'}>Services</a>
 			</NavBarMenuItem>
 			<NavBarMenuItem>
-				<a href="/#contacts">Contact&nbsp;Us</a>
+				<a href={process.env.PUBLIC_URL + '/#contacts'}>Contact&nbsp;Us</a>
 			</NavBarMenuItem>
 		</React.Fragment>
 	);

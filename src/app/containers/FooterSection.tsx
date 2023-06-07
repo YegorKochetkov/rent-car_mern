@@ -78,13 +78,13 @@ function FooterSection() {
 					<h3>Help</h3>
 					<LinksWrapper>
 						<li>
-							<a href="/#">Support</a>
+							<a href={process.env.PUBLIC_URL + '/#'}>Support</a>
 						</li>
 						<li>
-							<a href="/#">FAQ</a>
+							<a href={process.env.PUBLIC_URL + '/#'}>FAQ</a>
 						</li>
 						<li>
-							<a href="/#">Blog</a>
+							<a href={process.env.PUBLIC_URL + '/#'}>Blog</a>
 						</li>
 					</LinksWrapper>
 				</Links>
@@ -105,10 +105,10 @@ function FooterSection() {
 					<h3>Legal</h3>
 					<LinksWrapper>
 						<li>
-							<a href="/#">Terms & Conditions</a>
+							<a href={process.env.PUBLIC_URL + '/#'}>Terms & Conditions</a>
 						</li>
 						<li>
-							<a href="/#">Privacy policy</a>
+							<a href={process.env.PUBLIC_URL + '/#'}>Privacy policy</a>
 						</li>
 					</LinksWrapper>
 				</Links>

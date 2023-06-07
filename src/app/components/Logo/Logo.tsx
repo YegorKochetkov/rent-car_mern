@@ -24,7 +24,7 @@ const LogoImage = tw.img`
 
 function Logo() {
 	return (
-		<LogoContainer href="/#">
+		<LogoContainer href={process.env.PUBLIC_URL + '/#'}>
 			<LogoImage
 				src={process.env.PUBLIC_URL + '/assets/images/logo.svg'}
 				alt="Car shape in circle"
