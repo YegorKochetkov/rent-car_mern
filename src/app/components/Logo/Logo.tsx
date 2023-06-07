@@ -1,4 +1,3 @@
-import CarLogoImg from 'assets/images/logo.svg';
 import React, { memo } from 'react';
 import tw from 'twin.macro';
 
@@ -25,8 +24,11 @@ const LogoImage = tw.img`
 
 function Logo() {
 	return (
-		<LogoContainer href="/">
-			<LogoImage src={CarLogoImg} alt="Car shape in circle" />
+		<LogoContainer href="/#">
+			<LogoImage
+				src={process.env.PUBLIC_URL + '/assets/images/logo.svg'}
+				alt="Car shape in circle"
+			/>
 			Rent<span>Car</span>.
 		</LogoContainer>
 	);

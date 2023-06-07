@@ -1,8 +1,5 @@
 import React from 'react';
 import tw from 'twin.macro';
-import BlobImage from '../../../assets/images/blob.svg';
-import CarPng from '../../../assets/images/mclaren.png';
-import CarWebp from '../../../assets/images/mclaren.webp';
 
 const Wrapper = tw.div`
 	relative
@@ -63,11 +60,21 @@ function McLaren() {
 	return (
 		<Wrapper>
 			<BlobContainer>
-				<img src={BlobImage} alt="abstract round shapeless background" />
+				<img
+					src={process.env.PUBLIC_URL + '/assets/images/blob.svg'}
+					alt="abstract round shapeless background"
+				/>
 			</BlobContainer>
 			<CarContainer>
-				<source srcSet={CarWebp} type="image/webp" />
-				<img src={CarPng} alt="orange McLaren" ref={imgRef} />
+				<source
+					srcSet={process.env.PUBLIC_URL + '/assets/images/mclaren.webp'}
+					type="image/webp"
+				/>
+				<img
+					src={process.env.PUBLIC_URL + '/assets/images/mclaren.png'}
+					alt="orange McLaren"
+					ref={imgRef}
+				/>
 			</CarContainer>
 		</Wrapper>
 	);

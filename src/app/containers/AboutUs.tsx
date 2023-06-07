@@ -1,7 +1,5 @@
 import React from 'react';
 import tw from 'twin.macro';
-import JeepPng from '../../assets/images/jeep.png';
-import JeepWebp from '../../assets/images/jeep.webp';
 
 const AboutUsContainer = tw.div`
 	flex
@@ -58,8 +56,14 @@ function AboutUs() {
 	return (
 		<AboutUsContainer>
 			<CarContainer>
-				<source srcSet={JeepWebp} type="image/webp" />
-				<img src={JeepPng} alt="Red Jeep Wrangler" />
+				<source
+					srcSet={process.env.PUBLIC_URL + '/assets/images/jeep.webp'}
+					type="image/webp"
+				/>
+				<img
+					src={process.env.PUBLIC_URL + '/assets/images/jeep.png'}
+					alt="Red Jeep Wrangler"
+				/>
 			</CarContainer>
 			<InfoContainer>
 				<Title>Feel the best experience with out rent deal</Title>
