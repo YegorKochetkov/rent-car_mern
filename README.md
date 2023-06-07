@@ -13,10 +13,10 @@
 - [x] Create list of cars component
 - [x] Add responsive carousel component for booking steps
 - [x] Create footer
-- [ ] Set up backend server project with Nest.js
-- [ ] Set up TypeORM with MySQL database on Nest.js
-- [ ] Set up Apollo GraphQL
-- [ ] Set up Redux store
+- [x] Set up backend server project with Nest.js
+- [x] Set up TypeORM with MySQL database on Nest.js
+- [x] Set up Apollo GraphQL
+- [x] Set up Redux store
 - [ ] Set up VPS
 - [ ] Serve React App through Node.js production server
 - [ ] Dockerize backend and frontend with Node image
