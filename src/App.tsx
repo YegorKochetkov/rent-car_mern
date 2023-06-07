@@ -1,5 +1,5 @@
-import React from 'react';
 import HomePage from 'app/containers/HomePage';
+import React from 'react';
 import tw from 'twin.macro';
 
 const AppContainer = tw.div`

@@ -17,3 +17,21 @@ export const GET_ALL_CARS = gql`
 		}
 	}
 `;
+
+export const GET_CAR_BY_ID = gql`
+	query ($carId: String!) {
+		carById(carId: $carId) {
+			id
+			name
+			mileage
+			gas
+			monthlyPrice
+			dailyPrice
+			gearType
+			thumbnail {
+				xs
+				sm
+			}
+		}
+	}
+`;
