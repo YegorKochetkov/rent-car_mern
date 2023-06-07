@@ -1,5 +1,8 @@
 import { render, screen } from '@testing-library/react';
-import HomePage from 'app/containers/HomePage';
+import BookCard from 'app/components/BookCard/BookCard';
+import CarCard from 'app/components/CarCard/CarCard';
+import AboutUs from 'app/containers/AboutUs';
+import BookingSteps from 'app/containers/BookingSteps';
 import NavBar from 'app/containers/NavBar';
 import TopSection from 'app/containers/TopSection';
 import React from 'react';
@@ -12,7 +15,7 @@ test('render menu', () => {
 });
 
 test('render about us', () => {
-	render(<HomePage />);
+	render(<AboutUs />);
 	const header = screen.getByText(
 		/Feel the best experience with out rent deal/i,
 	);
@@ -38,19 +41,34 @@ test('render buttons', () => {
 });
 
 test('render book card', () => {
-	render(<HomePage />);
+	render(<BookCard />);
 	const bookCard = screen.getByText(/return date/i);
 	expect(bookCard).toBeInTheDocument();
 });
 
 test('render booking steps', () => {
-	render(<HomePage />);
+	render(<BookingSteps />);
 	const steps = screen.getAllByTestId('step');
 	expect(steps).toHaveLength(3);
 });
 
 test('render car card', () => {
-	render(<HomePage />);
-	const cards = screen.getAllByTestId('card');
-	expect(cards).toHaveLength(8);
+	const mockCar = {
+		id: 'sdfasdf',
+		name: 'Rolls-Royce Ghost',
+		mileage: 2000,
+		thumbnail: {
+			id: 'ksdfsa',
+			xs: 'rolls_royce_120.png',
+			sm: 'rolls_royce.png',
+		},
+		dailyPrice: 150,
+		monthlyPrice: 3600,
+		gearType: 'auto',
+		gas: 'petrol',
+	};
+
+	render(<CarCard {...mockCar} />);
+	const card = screen.getByTestId('card');
+	expect(card).toHaveTextContent(/Rolls-Royce/i);
 });
