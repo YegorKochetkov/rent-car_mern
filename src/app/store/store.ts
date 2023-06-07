@@ -1,7 +1,10 @@
 import { Action, configureStore, ThunkAction } from '@reduxjs/toolkit';
+import topCarsSliceReducer from './slices/topCarsSlice';
 
 export const store = configureStore({
-	reducer: {},
+	reducer: {
+		topCars: topCarsSliceReducer,
+	},
 });
 
 // Infer the `RootState` and `AppDispatch` types from the store itself

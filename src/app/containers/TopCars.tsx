@@ -1,5 +1,7 @@
-import Car from 'app/components/Car/Car';
-import { Cars } from 'app/helpers/cars';
+import CarCard from 'app/components/CarCard/CarCard';
+import carService from 'app/services/carService';
+import { useAppDispatch, useAppSelector } from 'app/store/hooks';
+import { selectTopCars, setTopCars } from 'app/store/slices/topCarsSlice';
 import { motion, Variants } from 'framer-motion';
 import React from 'react';
 import tw from 'twin.macro';
@@ -30,7 +32,6 @@ const CarsContainer = tw.div`
 	grid-cols-1
 	md:grid-cols-2
 	xl:grid-cols-3
-	2xl:grid-cols-4
 	gap-4
 	transition-all
 `;
@@ -45,8 +46,25 @@ const motionVariants: Variants = {
 };
 
 function TopCars() {
+	const dispatch = useAppDispatch();
+	const cars = useAppSelector(selectTopCars);
+
+	React.useEffect(() => {
+		const fetchTopCars = async () => {
+			const cars = await carService
+				.getCars()
+				.catch((error) => console.log('Error fetching cars: ', error));
+
+			if (cars) {
+				dispatch(setTopCars(cars));
+			}
+		};
+
+		fetchTopCars();
+	}, [cars, dispatch]);
+
 	return (
-		<TopCarContainer>
+		<TopCarContainer id="cars">
 			<Title>Explore our top deals</Title>
 			<motion.div
 				variants={motionVariants}
@@ -55,9 +73,7 @@ function TopCars() {
 				viewport={{ once: true, amount: 0.1 }}
 			>
 				<CarsContainer>
-					{Cars.map((car) => (
-						<Car {...car} key={car.name} />
-					))}
+					{cars.length && cars.map((car) => <CarCard {...car} key={car.id} />)}
 				</CarsContainer>
 			</motion.div>
 		</TopCarContainer>
