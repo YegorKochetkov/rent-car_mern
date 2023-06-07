@@ -48,9 +48,12 @@ const motionVariants: Variants = {
 function TopCars() {
 	const dispatch = useAppDispatch();
 	const cars = useAppSelector(selectTopCars);
+	const [loading, setLoading] = React.useState(true);
 
 	React.useEffect(() => {
 		const fetchTopCars = async () => {
+			setLoading(true);
+
 			const cars = await carService
 				.getCars()
 				.catch((error) => console.log('Error fetching cars: ', error));
@@ -58,10 +61,20 @@ function TopCars() {
 			if (cars) {
 				dispatch(setTopCars(cars));
 			}
+
+			setLoading(false);
 		};
 
 		fetchTopCars();
 	}, [cars, dispatch]);
+
+	if (loading) {
+		return <h3>Loading...</h3>;
+	}
+
+	if (cars.length === 0) {
+		return <h3>No cars :(</h3>;
+	}
 
 	return (
 		<TopCarContainer id="cars">
