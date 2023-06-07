@@ -50,10 +50,15 @@ export type CarPhoto = {
 export type Mutation = {
 	__typename?: 'Mutation';
 	addNewCar: Car;
+	deleteCar: Scalars['String']['output'];
 };
 
 export type MutationAddNewCarArgs = {
 	newCarData: NewCarInput;
+};
+
+export type MutationDeleteCarArgs = {
+	carId: Scalars['String']['input'];
 };
 
 export type NewCarInput = {
@@ -73,5 +78,10 @@ export type NewCarPhotoInput = {
 
 export type Query = {
 	__typename?: 'Query';
+	carById: Car;
 	cars: Array<Car>;
+};
+
+export type QueryCarByIdArgs = {
+	carId: Scalars['String']['input'];
 };

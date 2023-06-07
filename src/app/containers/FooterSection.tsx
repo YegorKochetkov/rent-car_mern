@@ -64,7 +64,7 @@ const LinksWrapper = tw.ul`
 
 function FooterSection() {
 	return (
-		<Footer>
+		<Footer id="contacts">
 			<AboutUsContainer>
 				<Logo />
 				<p>

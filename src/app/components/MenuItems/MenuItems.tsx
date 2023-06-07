@@ -18,13 +18,13 @@ function MenuItems() {
 				<a href="/#">Home</a>
 			</NavBarMenuItem>
 			<NavBarMenuItem>
-				<a href="/#">Cars</a>
+				<a href="/#cars">Cars</a>
 			</NavBarMenuItem>
 			<NavBarMenuItem>
 				<a href="/#">Services</a>
 			</NavBarMenuItem>
 			<NavBarMenuItem>
-				<a href="/#">Contact&nbsp;Us</a>
+				<a href="/#contacts">Contact&nbsp;Us</a>
 			</NavBarMenuItem>
 		</React.Fragment>
 	);
