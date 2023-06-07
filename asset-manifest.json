@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/rent-car_mern/static/css/main.257d2afa.css",
-    "main.js": "/rent-car_mern/static/js/main.684a3963.js",
+    "main.js": "/rent-car_mern/static/js/main.81b1ccfa.js",
     "static/js/787.0d6199b8.chunk.js": "/rent-car_mern/static/js/787.0d6199b8.chunk.js",
     "index.html": "/rent-car_mern/index.html",
     "main.257d2afa.css.map": "/rent-car_mern/static/css/main.257d2afa.css.map",
-    "main.684a3963.js.map": "/rent-car_mern/static/js/main.684a3963.js.map",
+    "main.81b1ccfa.js.map": "/rent-car_mern/static/js/main.81b1ccfa.js.map",
     "787.0d6199b8.chunk.js.map": "/rent-car_mern/static/js/787.0d6199b8.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.257d2afa.css",
-    "static/js/main.684a3963.js"
+    "static/js/main.81b1ccfa.js"
   ]
 }
