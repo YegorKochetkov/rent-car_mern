@@ -3,6 +3,7 @@ import Slogan from 'app/components/Slogan/Slogan';
 import McLaren from 'app/components/StandaloneCar/StandaloneCar';
 import { motion } from 'framer-motion';
 import React from 'react';
+import styled from 'styled-components';
 import tw from 'twin.macro';
 
 const TopSectionContainer = tw.div`
@@ -15,16 +16,20 @@ const TopSectionContainer = tw.div`
 	lg:px-12
 `;
 
-const LeftContainer = tw.div`
-	flex
-	flex-col
-	gap-4
+const LeftContainer = styled(motion.div)`
+	${tw`
+		flex
+		flex-col
+		gap-4
+	`}
 `;
 
-const RightContainer = tw.div`
-	flex
-	flex-col
-	z-[-1]
+const RightContainer = styled(motion.div)`
+	${tw`
+		flex
+		flex-col
+		z-[-1]
+	`}
 `;
 
 const ButtonsContainer = tw.div`
@@ -34,32 +39,28 @@ const ButtonsContainer = tw.div`
 function TopSection() {
 	return (
 		<TopSectionContainer>
-			<motion.div
+			<LeftContainer
 				initial={{ opacity: 0, x: -200 }}
 				animate={{ opacity: 1, x: 0 }}
 				transition={{ duration: 0.5 }}
 			>
-				<LeftContainer>
-					<Slogan />
-					<ButtonsContainer>
-						<Button>
-							Book your <span>Ride</span>
-						</Button>
-						<Button theme="outlined">
-							Sell your <span>Car</span>
-						</Button>
-					</ButtonsContainer>
-				</LeftContainer>
-			</motion.div>
-			<motion.div
+				<Slogan />
+				<ButtonsContainer>
+					<Button>
+						Book your <span>Ride</span>
+					</Button>
+					<Button theme="outlined">
+						Sell your <span>Car</span>
+					</Button>
+				</ButtonsContainer>
+			</LeftContainer>
+			<RightContainer
 				initial={{ opacity: 0, x: 200 }}
 				animate={{ opacity: 1, x: 0 }}
 				transition={{ duration: 0.5, delay: 0.2 }}
 			>
-				<RightContainer>
-					<McLaren />
-				</RightContainer>
-			</motion.div>
+				<McLaren />
+			</RightContainer>
 		</TopSectionContainer>
 	);
 }

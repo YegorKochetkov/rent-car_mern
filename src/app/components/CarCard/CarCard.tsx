@@ -2,6 +2,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { motion, Variants } from 'framer-motion';
 import { Car } from 'gql/graphql';
 import React from 'react';
+import styled from 'styled-components';
 import tw from 'twin.macro';
 import Button from '../Button/Button';
 import {
@@ -10,27 +11,29 @@ import {
 	faTachometerAlt,
 } from '@fortawesome/free-solid-svg-icons';
 
-const CarContainer = tw.div`
-	relative
-	grid
-	grid-rows-[repeat(5, 1fr)]
-	w-[12em]
-	sm:w-[15em]
-	h-[9.5em]
-	p-3
-	rounded-md
-	shadow-md
-	hover:shadow-lg
-	bg-white
-	[&_button]:transition-all
-	[&_button]:duration-500
-	[&_button]:text-base
-	[&_button]:w-[9em]
-	sm:[&&_button]:w-full
-	sm:hover:[&&_button]:w-[13.5em]
-	hover:[&>picture]:w-[5em]
-	sm:[&>picture]:w-[15em]
-	hover:[&>picture]:h-full
+const CarContainer = styled(motion.div)`
+	${tw`
+		relative
+		grid
+		grid-rows-[repeat(5, 1fr)]
+		w-[12em]
+		sm:w-[15em]
+		h-[9.5em]
+		p-3
+		rounded-md
+		shadow-md
+		hover:shadow-lg
+		bg-white
+		[&_button]:transition-all
+		[&_button]:duration-500
+		[&_button]:text-base
+		[&_button]:w-[9em]
+		sm:[&&_button]:w-full
+		sm:hover:[&&_button]:w-[13.5em]
+		hover:[&>picture]:w-[5em]
+		sm:[&>picture]:w-[15em]
+		hover:[&>picture]:h-full
+	`}
 `;
 
 const CarThumbnail = tw.picture`
@@ -165,49 +168,47 @@ function CarCard(props: Car) {
 	}).format(mileage);
 
 	return (
-		<motion.div variants={carCardVariants}>
-			<CarContainer data-testid="card">
-				<CarThumbnail>
-					<source
-						srcSet={process.env.PUBLIC_URL + `/assets/images/${thumbnail.sm}`}
-						media="(min-width: 640px)"
-					/>
-					<img
-						src={process.env.PUBLIC_URL + `/assets/images/${thumbnail.xs}`}
-						alt={`${name}`}
-					/>
-				</CarThumbnail>
-				<CarContent>
-					<CarName title={name}>{name}</CarName>
-					<PricesContainer>
-						<DailyPrice>
-							{formattedDailyPrice}
-							<span>/Day</span>
-						</DailyPrice>
-						<MonthlyPrice>
-							{formattedMonthlyPrice}
-							<span>/Month</span>
-						</MonthlyPrice>
-					</PricesContainer>
-					<Separator />
-					<CarDetailsContainer>
-						<CarDetails>
-							<FontAwesomeIcon icon={faTachometerAlt} />
-							<CarInfo>{formattedMileage}</CarInfo>
-						</CarDetails>
-						<CarDetails>
-							<FontAwesomeIcon icon={faGears} />
-							<CarInfo>{gearType}</CarInfo>
-						</CarDetails>
-						<CarDetails>
-							<FontAwesomeIcon icon={faFillDrip} />
-							<CarInfo>{gas}</CarInfo>
-						</CarDetails>
-					</CarDetailsContainer>
-					<Button>Rent now</Button>
-				</CarContent>
-			</CarContainer>
-		</motion.div>
+		<CarContainer variants={carCardVariants} data-testid="card">
+			<CarThumbnail>
+				<source
+					srcSet={process.env.PUBLIC_URL + `/assets/images/${thumbnail.sm}`}
+					media="(min-width: 640px)"
+				/>
+				<img
+					src={process.env.PUBLIC_URL + `/assets/images/${thumbnail.xs}`}
+					alt={`${name}`}
+				/>
+			</CarThumbnail>
+			<CarContent>
+				<CarName title={name}>{name}</CarName>
+				<PricesContainer>
+					<DailyPrice>
+						{formattedDailyPrice}
+						<span>/Day</span>
+					</DailyPrice>
+					<MonthlyPrice>
+						{formattedMonthlyPrice}
+						<span>/Month</span>
+					</MonthlyPrice>
+				</PricesContainer>
+				<Separator />
+				<CarDetailsContainer>
+					<CarDetails>
+						<FontAwesomeIcon icon={faTachometerAlt} />
+						<CarInfo>{formattedMileage}</CarInfo>
+					</CarDetails>
+					<CarDetails>
+						<FontAwesomeIcon icon={faGears} />
+						<CarInfo>{gearType}</CarInfo>
+					</CarDetails>
+					<CarDetails>
+						<FontAwesomeIcon icon={faFillDrip} />
+						<CarInfo>{gas}</CarInfo>
+					</CarDetails>
+				</CarDetailsContainer>
+				<Button>Rent now</Button>
+			</CarContent>
+		</CarContainer>
 	);
 }
 

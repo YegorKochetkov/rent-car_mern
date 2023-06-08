@@ -5,6 +5,7 @@ import { useAppDispatch, useAppSelector } from 'app/store/hooks';
 import { selectTopCars, setTopCars } from 'app/store/slices/topCarsSlice';
 import { motion, Variants } from 'framer-motion';
 import React from 'react';
+import styled from 'styled-components';
 import tw from 'twin.macro';
 
 const TopCarContainer = tw.div`
@@ -28,13 +29,15 @@ const Title = tw.h2`
 	md:mb-10
 `;
 
-const CarsContainer = tw.div`
-	grid
-	grid-cols-1
-	md:grid-cols-2
-	xl:grid-cols-3
-	gap-4
-	transition-all
+const CarsContainer = styled(motion.div)`
+	${tw`
+		grid
+		grid-cols-1
+		md:grid-cols-2
+		xl:grid-cols-3
+		gap-4
+		transition-all
+	`}
 `;
 
 const motionVariants: Variants = {
@@ -86,17 +89,15 @@ function TopCars() {
 	return (
 		<TopCarContainer id="cars">
 			<Title>Explore our top deals</Title>
-			<motion.div
+			<CarsContainer
 				variants={motionVariants}
 				initial="offscreen"
 				whileInView="onscreen"
 				viewport={{ once: true, amount: 0.1 }}
 			>
-				<CarsContainer>
-					{cars.length > 0 &&
-						cars.map((car) => <CarCard {...car} key={car.id} />)}
-				</CarsContainer>
-			</motion.div>
+				{cars.length > 0 &&
+					cars.map((car) => <CarCard {...car} key={car.id} />)}
+			</CarsContainer>
 		</TopCarContainer>
 	);
 }
