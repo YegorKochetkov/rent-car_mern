@@ -1,5 +1,5 @@
 import CarCard from 'app/components/CarCard/CarCard';
-import { Cars } from 'app/helpers/cars';
+import { mockCars } from 'app/helpers/mockCars';
 import carService from 'app/services/carService';
 import { useAppDispatch, useAppSelector } from 'app/store/hooks';
 import { selectTopCars, setTopCars } from 'app/store/slices/topCarsSlice';
@@ -63,6 +63,12 @@ function TopCars() {
 				dispatch(setTopCars(cars));
 			}
 
+			// Fallback while backend don't ready;
+			// remove when backend is ready
+			if (!cars) {
+				dispatch(setTopCars(mockCars));
+			}
+
 			setLoading(false);
 		};
 
@@ -73,12 +79,9 @@ function TopCars() {
 		return <h3>Loading...</h3>;
 	}
 
-	//Fallback while backend don't ready
-	const fallbackCars = Cars;
-
-	// if (cars.length === 0) {
-	// 	return <h3>No cars :(</h3>;
-	// }
+	if (cars.length === 0) {
+		return <h3>No cars :(</h3>;
+	}
 
 	return (
 		<TopCarContainer id="cars">
@@ -92,8 +95,6 @@ function TopCars() {
 				<CarsContainer>
 					{cars.length > 0 &&
 						cars.map((car) => <CarCard {...car} key={car.id} />)}
-					{cars.length === 0 &&
-						fallbackCars.map((car) => <CarCard {...car} key={car.id} />)}
 				</CarsContainer>
 			</motion.div>
 		</TopCarContainer>
