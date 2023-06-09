@@ -1,4 +1,5 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { formatNumber } from 'app/helpers/formatNumber';
 import { motion, Variants } from 'framer-motion';
 import { Car } from 'gql/graphql';
 import React from 'react';
@@ -148,24 +149,31 @@ function CarCard(props: Car) {
 	const { name, thumbnail, dailyPrice, monthlyPrice, mileage, gearType, gas } =
 		props;
 
-	const formattedDailyPrice = new Intl.NumberFormat('en-US', {
+	const currencyFormatOptions = {
 		style: 'currency',
 		currency: 'USD',
 		currencySign: 'accounting',
 		maximumFractionDigits: 0,
-	}).format(dailyPrice);
+	} satisfies Intl.NumberFormatOptions;
 
-	const formattedMonthlyPrice = new Intl.NumberFormat('en-US', {
-		style: 'currency',
-		currency: 'USD',
-		currencySign: 'accounting',
-		maximumFractionDigits: 0,
-	}).format(monthlyPrice);
-
-	const formattedMileage = new Intl.NumberFormat('en-US', {
+	const mileageFormatOptions = {
 		notation: 'compact',
 		compactDisplay: 'short',
-	}).format(mileage);
+	} satisfies Intl.NumberFormatOptions;
+
+	const formattedDailyPrice = formatNumber(
+		'en-US',
+		currencyFormatOptions,
+		dailyPrice,
+	);
+
+	const formattedMonthlyPrice = formatNumber(
+		'en-US',
+		currencyFormatOptions,
+		monthlyPrice,
+	);
+
+	const formattedMileage = formatNumber('en-US', mileageFormatOptions, mileage);
 
 	return (
 		<CarContainer variants={carCardVariants} data-testid="card">
