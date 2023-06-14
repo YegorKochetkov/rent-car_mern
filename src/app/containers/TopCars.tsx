@@ -52,11 +52,11 @@ const motionVariants: Variants = {
 function TopCars() {
 	const dispatch = useAppDispatch();
 	const cars = useAppSelector(selectTopCars);
-	const [loading, setLoading] = React.useState(true);
+	const [isLoading, setIsLoading] = React.useState(true);
 
 	React.useEffect(() => {
 		const fetchTopCars = async () => {
-			setLoading(true);
+			setIsLoading(true);
 
 			const cars = await carService
 				.getCars()
@@ -72,13 +72,13 @@ function TopCars() {
 				dispatch(setTopCars(mockCars));
 			}
 
-			setLoading(false);
+			setIsLoading(false);
 		};
 
 		fetchTopCars();
 	}, [cars, dispatch]);
 
-	if (loading) {
+	if (isLoading) {
 		return <h3>Loading...</h3>;
 	}
 
