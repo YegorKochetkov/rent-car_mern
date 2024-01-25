@@ -10,7 +10,7 @@ class CarService {
 				throw error;
 			});
 
-		if (response && response.data) {
+		if (response?.data) {
 			const { cars } = response.data;
 			return cars as Car[];
 		}
@@ -25,7 +25,7 @@ class CarService {
 				throw error;
 			});
 
-		if (response && response.data) {
+		if (response?.data) {
 			const { carById } = response.data;
 			return carById as Car;
 		}

@@ -57,11 +57,11 @@ function AboutUs() {
 		<AboutUsContainer>
 			<CarContainer>
 				<source
-					srcSet={process.env.PUBLIC_URL + '/assets/images/jeep.webp'}
+					srcSet={`${process.env.PUBLIC_URL}/assets/images/jeep.webp`}
 					type="image/webp"
 				/>
 				<img
-					src={process.env.PUBLIC_URL + '/assets/images/jeep.png'}
+					src={`${process.env.PUBLIC_URL}/assets/images/jeep.png`}
 					alt="Red Jeep Wrangler"
 				/>
 			</CarContainer>

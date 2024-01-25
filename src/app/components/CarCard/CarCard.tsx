@@ -179,11 +179,11 @@ function CarCard(props: Car) {
 		<CarContainer variants={carCardVariants} data-testid="card">
 			<CarThumbnail>
 				<source
-					srcSet={process.env.PUBLIC_URL + `/assets/images/${thumbnail.sm}`}
+					srcSet={`${process.env.PUBLIC_URL}/assets/images/${thumbnail.sm}`}
 					media="(min-width: 640px)"
 				/>
 				<img
-					src={process.env.PUBLIC_URL + `/assets/images/${thumbnail.xs}`}
+					src={`${process.env.PUBLIC_URL}/assets/images/${thumbnail.xs}`}
 					alt={`${name}`}
 				/>
 			</CarThumbnail>
